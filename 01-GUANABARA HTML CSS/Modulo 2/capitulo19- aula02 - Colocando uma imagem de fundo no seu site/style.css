@@ -1,0 +1,34 @@
+body {
+    background-image: url("img/wallpaper001.jpg");
+
+}
+
+div.quadrado {
+    display: inline-block;
+    border: 2px solid black;
+    width: 300px;
+    height: 300px;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+div#q1 {
+    background-color: skyblue;
+}
+
+div#q2 {
+    background-image: linear-gradient(to bottom, yellow, red);
+}
+
+div#q3 {
+    background-image: url("img/pattern003.png");
+
+
+}
+
+/* TRÊS MANEIRAS DE COLOCAR IMAGENS
+BACKGROUND-COLOR
+BACKGROUND-IMAGE: LINEAR GRADIENT
+BACKGROUND-IMAGE: URL (CARREGAR UMA IMAGEM)
+
+*/

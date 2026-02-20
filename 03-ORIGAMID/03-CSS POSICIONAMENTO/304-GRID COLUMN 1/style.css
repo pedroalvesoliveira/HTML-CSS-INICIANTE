@@ -1,0 +1,96 @@
+/* AULA 1-  Estilos Gerais ↓ */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 40px;
+}
+h1,
+p {
+  margin: 0;
+}
+h1 {
+  font-size: 48px;
+  line-height: 1;
+  /* line-height:1 - diminui o espaçamento entre as linhas, caso a palavra Stark fique embaixo do h1*/
+}
+p,
+span {
+  font-size: 20px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.comprar {
+  background: #a8f;
+  padding: 10px 20px;
+  color: #103;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+.preco {
+  background: #e9d8d8;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+/* INCIO DA AULA 2 */
+
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.foto {
+  /* grid-column: 1 / 3; conteudo ocupa da coluna 1 até a coluna 3 */
+  grid-column: 1 / -1;
+}
+.descrição {
+  grid-column: 1 / 3;
+}
+.comprar {
+  grid-column: 1 / 3;
+}
+
+/* AULA 2 
+
+1- Ao adicionarmos o display:grid no elemento pai, automaticamente podemos notar que todos os elementos passam a se tornar grid items ou itens de grid. A diferença é que ele ja tenta expandir 100% do elemento pai, e isso é aplicado também a elementos inline, que por padrão ocupam só o tamanho do conteudo do elemento, agora, eles passam a ocupar 100% do tamanho do conteiner, e um adendo, ele passa a repeitar o padding que foi definido em vez de ficar grudado na imagem como ateriormente.
+
+2- Adicionado um gap:20px; ocorre a separação de 20px entre os conteúdos.
+
+3- Adicionado  grid-template-columns: 1fr 1fr; ocorre a separação do conteúdo, em duas colunas, que ocupam o mesmo espaço de tela.
+
+4- AGORA EU QUERO QUE A IMAGEM SE EXPANDA DE PONTA A PONTA NA TELA, COMO QUE EU FALO EM SINTAXE PARA O CSS: IMAGEM, OCUPE O TAMANHO DE DUAS COLUNAS?
+
+5- Primeiramente, eu falo com a imagem, e não com o conteiner, portanto adicionamos uma class="foto" na tag imagem em HTML.
+
+6- Em .foto, .descricao e .comprar no CSS, foram adicionados um grid-column: 1 / 3; pois se eu possuo 2 colunas, eu terei 3 linhas verticais, desta forma todos ocuparam a largura total do container.
+
+7- E SE POR ALGUM MOTIVO EU NÃO SOUBER NÚMERO DE COLUNAS, COMO POSSO FAZER PARA ELE OCUPAR A LARGURA TOTAL DO ELEMENTO PAI? 
+Outra maneira de dizer que você quer que o item pegue de ponta a ponta, é usando o -1 depois da barra, com o valor -1 após a barra, você garante que INDEPENDENTE DO NÚMERO DE COLUNAS, o item sempre pegará de ponta a ponta.
+
+GRID-COLUMN
+===============
+é um atalho (shorthand) para definir o tamanho e a posição inicial/final de um item dentro do CSS Grid, especificando onde ele começa e termina na área de colunas.
+Ela combina grid-column-start e grid-column-end, permitindo que um item ocupe múltiplas colunas.
+Uso: É uma propriedade aplicada diretamente ao filho (item) do contêiner grid, não ao container pai. 
+
+GRID-COLUMNS: SPAN
+==================
+8- Imagine o span no CSS Grid como uma instrução de "esticar" ou "mesclar" células, igualzinho ao "Mesclar Células" do Excel. 
+span significa, literalmente, "abrangência" ou "ocupar".
+Exemplo prático: grid-column: 1 / span 2;
+Isso diz ao navegador:
+1: Comece na coluna número 1.
+span 2: Ocupe (abranja) um total de 2 colunas a partir dali. 
+O resultado: O seu elemento vai ficar com o dobro da largura, ocupando a coluna 1 e a coluna 2.
+POR QUE USAR?
+Criar layouts mais largos: Ótimo para fazer um cabeçalho (header) que ocupa toda a largura, enquanto as outras partes da página ficam mais estreitas.
+Destaque: Fazer um item ocupar duas colunas em um layout de quatro, por exemplo. 
+Dica: Você também pode usar grid-row: span 2; para esticar um item para baixo, ocupando duas linhas (altura). 
+*/

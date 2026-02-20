@@ -1,0 +1,42 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  padding: 10px;
+}
+h1 {
+  text-align: center;
+}
+h2,
+button {
+  color: white;
+}
+p {
+  color: #b2b2b2;
+}
+.amarelo1 {
+  color: #febe01;
+}
+.amarelo2 {
+  color: #332200;
+}
+
+.box {
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+   */
+  background-color: #111;
+  margin: 20px;
+  padding: 10px 10px 20px 20px;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #febe01;
+  color: #332200;
+  border-radius: 4px;
+  padding: 8px;
+  font-weight: 540;
+  cursor: pointer;
+}

@@ -1,0 +1,70 @@
+body{
+    font-family: helvetica, arial, sans-serif;
+    background-color: gray;
+    margin: 0px;
+}
+
+header{
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+}
+
+nav{
+    background-color: rgb(109, 108, 108);
+    padding: 3px;
+    /* os valores no box shadow, neste caso, são: deslocamento horizontal, deslocamento vertical, borrão, espalhamento e cor da sombra, também temos sombras inset e offset (internas e externas)  */
+    box-shadow: -4px -2px 5px 1px rgba(0, 0, 0, 0.422);
+    
+}
+
+nav > a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+nav > a:hover{
+    text-decoration: underline;
+}
+
+main{
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: -7px -4px 10px 1px black;
+    /* Diferente da declaração margin, se eu colocar dois valores na declaração border radius, ela vai assumir que as bordas superior esquerda e inferior direita sejam iguais, e o segundo valor corresponderá as bordas superior direita e inferior esquerda */
+    border-radius: 20px 0px;
+    }
+
+article{
+    background-color: lightgray;
+    padding: 5px;
+}    
+
+article > aside{
+    background-color:rgb(185, 184, 184) ;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0.5px;
+    margin: 0px;
+}
+
+footer > p {
+    margin: 0px;
+}
+
+div#bola{
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 50%; /* transforma o quadrado em bola, pode ser definido em px também, porém, a border-radius com valor de 50% já transforma o quadrado em bola automaticamente*/ 
+   
+}

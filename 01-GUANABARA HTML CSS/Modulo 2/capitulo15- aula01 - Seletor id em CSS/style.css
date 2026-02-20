@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/*Quando você chama uma ID dentro de uma tag( que é um atributo global, ou especificamente, atributo de identidade, você usará a # para chama-la em CSS.  */
+
+/*Toda vez que você chamar um atributo CLASS dentro de uma div HTML, você usará o . para chama-la em CSS*/
+
+body{
+    background-color: rgb(195, 249, 216);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color: rgb(89, 126, 88);
+}
+
+/*SELETOR PERSONALIZADO*/
+h1#principal{
+    text-align: center;
+    color: red;
+    background-color: blue;
+}
+
+h2{
+    color: rgb(85, 107, 84);
+}

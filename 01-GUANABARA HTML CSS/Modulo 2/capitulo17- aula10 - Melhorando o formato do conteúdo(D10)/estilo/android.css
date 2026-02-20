@@ -1,0 +1,164 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Berkshire+Swash&display=swap');
+
+@font-face{
+    font-family:'Android';
+    font-weight: normal;
+    src: url('../fontes/idroid.otf')
+
+}
+/* PSEUDOCLASSE ROOT
+Todo documento tem, é a raiz da arvore do documento, onde podemos declarar nossas "variáveis globais", e tudo que for definido aqui encima, vai servir para o documento inteiro, portanto, basicamente, eu posso criar variáveis aqui dentro.
+A regra para se criar uma váriavel em CSS é começar com dois traços (--), e após isso, você coloca o nome que quiser em sua variável, logicamente, coloque um nome correspondente com a função que a variável vai exercer em seu documento.
+*/
+:root{
+    --cor0:#ebe5c5;
+    --cor1:#83e1ad;
+    --cor2:#3ddc84;
+    --cor3:#2fa866;
+    --cor4:#1a5c37;
+    --cor5:#063d1e;
+    
+    /* Aqui declaramos as fontes como variáveis,  */
+    --fonte-padrao: arial, helvetica, verdana, sans-serif;
+    --fonte-destaque:'Bebas Neue', sans-serif;
+    --fonte-android: 'Android', sans-serif;
+
+}
+
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+
+body{
+    background-color: car(--cor0);
+    font-family: var(--fonte-padrao);
+    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
+}
+
+header{
+    /* Aqui no background image, fizemos um degradê de cores, usando o linear-gradient*/
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor5));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+}
+    
+header > h1{
+    color: white;
+    font-size: 3em;
+    font-family: var(--fonte-destaque);
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    text-shadow: 3px 3px 5px black;
+   
+}
+
+header > p{
+     color: white;
+     font-family: var(--fonte-padrao);
+     font-size: 1.2em;
+     max-width: 500px; /* garante que a largura máxima do parágrafo será a declarada */
+     /* Obs: ao declarar o valor do max-width, o parágrafo virou um bloco automáticamente, por isso  */
+     margin: auto;/*centraliza o conteúdo do parágrafo dentro do espaço do header*/
+     padding-right: 10px;
+     padding-left: 10px;
+    text-shadow: 3px 3px 5px black;
+     
+}
+
+nav{
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 9px black;
+}
+
+nav > a{
+    color:white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: .5s;
+     
+}
+
+nav > a:hover{
+background-color: var(--cor2);
+color: var(--cor5);
+}
+
+main{
+    background-color: white;
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px black;
+    border-bottom-left-radius:10px ;
+    border-bottom-right-radius: 10px;
+}
+
+main  h1{
+    color: var(--cor5);
+    font-family:var(--fonte-android);
+}
+main  h2{
+    color: var(--cor4);
+    font-family: var(--fonte-android);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor1), transparent); 
+    /*usamos para fazer um efeito degradê muito bonito em todos os h2 do texto, dando uma diferença brutal no visual */
+    text-indent: 8px;
+}
+
+main p{
+   margin: 15px 0px; 
+   text-align: justify;/*Desta forma ele alinha o texto direita/esquerda de uma maneira mais bonita */
+   text-indent: 30px; /*Aplica um recuo na primeira linha de cada parágrafo*/
+   font-size: 1.1em;/*aumenta levemente o tamanho da fonte, lembrando que 1em geralmente corresponde a 16px, que NORMALMENTE seria o tamanho padrão de uma fonte*/
+   line-height:1.5em;/*Adicionado para aumentar levemente o espaço entre uma linha e outra, e evitando que ao terminar de ler uma linha, você tente ler a linha de baixo e acabe lendo a mesma linha pelo fato das linhas estarem coladas de mais*/
+      
+}
+
+main strong{
+    color:var(--cor4);
+    font-weight: bold;
+}
+
+main a{
+    text-decoration: none;/* tira o sublinhado nativo do link */
+    font-weight: bold;
+    background-color:var(--cor1);
+    padding: 2px 6px; 
+    
+}
+
+main a:hover{
+    text-decoration:underline; /*adiciona um sublinhado apenas ao passar o mouse encima do link (para ficar com cara de link*/
+}
+
+main img {
+    width:100%;
+}
+
+main img.pequena {
+    max-width:350px;
+    margin: auto;
+    display: block; 
+    /*Aqui teve que ser inserido um display block para podermos centralizar a imagem com o comando margin auto, pois por padrão uma imagem não é um bloco, tirando assim a ação da declaração margin auto */
+}
+
+footer{
+    background-color: var(--cor5);
+    color: white;
+}
+
+
+ /* Nesta aula ja começamos corrigindo fazendo um acerto na imagem do bugdroid, que ficava pequeno de mais ao simular-mos uma tela de celular, e na tela normal do computador ele começava a embaçar a imagem, então corrigimos o Css. Na aula passada, deixamos o main img.pequena com width:50% da tela inteira, porém ao substituir-mos por um max width de 350px, dessa forma a imagem continuou de um tamanho legal e parou de ficar aumentando e diminuindo desproporcionalmente, causando um efeito visual muito melhor ao usuário */
+
+ /*Eu inseri por conta própria no body, uma declaração overflow:hidden, dessa forma, ele some com a barra de rolagem horizontal, porem não impede o conteúdo de se adaptar horizontalmente, ou seja, basicamente ele só some com a barra mesmo*/

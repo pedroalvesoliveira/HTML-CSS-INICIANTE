@@ -1,0 +1,29 @@
+*{
+    font-size: 1.6rem;
+
+}
+
+.container{
+    margin: 15px;
+    height:200px;
+    display:flex;
+    align-items: center;
+    justify-content:flex-start;
+     /* flex-direction: row-reverse; */
+    gap: 30px;
+    background-color: aquamarine;
+
+}
+
+.itens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    color: aliceblue;
+    background-color: purple;
+    border: 10px solid black;
+    border-radius: 10px;
+}
+

@@ -1,0 +1,42 @@
+body{
+    font-family:helvetica;
+    font-size: 1em;
+    /* Neste caso, a font family : serif; vai valer apenas para o texto dos parágrafos, pois o conteúdo dos titulos (h1 e h2) será estilizado com uma letra diferente, porém é um conjunto que está recomendado no w3c, (w3schools.com) */
+
+    /* MEDIDAS ABSOLUTAS
+    cm (centímetros), mm (milímetros), in(polegada), px(pixel), pt(ponto), pc(paica)
+    
+       MEDIDAS RELATIVAS
+
+       em:medida relativa ao tamanho da letra M maiúscula de um estilo de fonte que está sendo usado
+
+       ex:da mesma maneira que a altura M(em), a altura X(ex), é referente ao tamanho da letra X do estilo de fonte que está sendo usado     
+       
+       rem: medida relativa ao tamanho da letra M maiúscula da fonte que está configurada no root(body)
+       
+       vw (view width): se refere a porcentagem da largura da "viewport", ou seja, o tamanho da sua tela. EX: uma tela de celular tem uma viewport(tamanho de tela) diferente da viewport(tamanho de tela) de um monitor.    
+       
+       vh (view height): se refere a porcentagem da altura da "viewport", ou seja, o tamanho da sua tela. EX: uma tela de celular tem uma viewport(tamanho de tela) diferente da viewport(tamanho de tela) de um monitor.
+        
+       %: porcentagem
+
+        OBS: 16px geralmente é o tamanho normal da fonte de um site ou app, e também geralmente corresponde a 1em.
+
+        OBS2: uma polegada (1in), tem a medida de 2,54cm.
+
+       */
+
+        
+}
+
+    p{
+        font-size: 18px;
+        /* tamanho da fonte dos parágrafos */
+        padding: 5px;
+        /* colocando uma pequena margem interna de 5px, "empurrando o texto pra dentro" */
+    }
+    
+    h1, h2 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+       

@@ -1,0 +1,24 @@
+-vs code instalado na outra maquina
+-github desktop logado na sua conta
+-logar no sign in GitHub.com
+-clonar repositório na outra maquina
+-caso não funcione de primeira, faça:
+1-File - Options -  clicar em GIT - ele ja vai estar com tudo configurado, é só clicar no nome de cima, no de baixo e clicar em save. (isso é um macete)
+-escolha o repositorio, clique em clonar, crie nova pasta para clonar seu repositorio. 
+-clique em selecionar pasta
+-clique em clone
+- GG
+
+
+
+Sem vestígio:
+
+- Faça seu trampo no vs code, e após faze-lo, faça o commit no seu repositorio remoto do github.
+
+-FECHE TODOS OS PROGRAMAS
+- DEIXE SÓ O GitHub DESKTOP ABERTO
+- VÁ EM REPOSITORIO, CLIQUE EM REMOVE, ELIMINAR PARA A LIXEIRA.
+
+- FILE- Options - SIGN OUT 
+- GIT - APAGUE SEU NOME E EMAIL E SALVE
+- ESVAZIE A LIXEIRA

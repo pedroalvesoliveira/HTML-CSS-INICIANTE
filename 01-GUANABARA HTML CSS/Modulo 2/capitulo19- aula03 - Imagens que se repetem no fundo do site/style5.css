@@ -1,0 +1,21 @@
+body{
+    display: flex;
+    height: 95vh;
+    background-image: url('img/wallpaper003.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+       
+}
+
+/* Para que a imagem de fundo cubra toda a tela em CSS, use background-size: cover; no elemento desejado (geralmente body ou um div), junto com background-image, background-repeat: no-repeat; e background-position: center; para um resultado ideal e responsivo, garantindo que a imagem preencha o contêiner sem distorção, cortando as bordas se necessário. 
+
+background-size: cover;
+background-repeat: no-repeat
+background-position: center;
+
+
+DICA MONSTRA:
+algumas vezesm, ao mecher com imagens no seletor body, você precisara mecher primeiro na declaração height, pois por padrão, o body vem com uma altura "achatada"
+
+*/

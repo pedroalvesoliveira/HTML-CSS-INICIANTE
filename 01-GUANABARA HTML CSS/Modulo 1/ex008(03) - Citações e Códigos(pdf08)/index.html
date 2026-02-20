@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Outras Formatações</title>
+</head>
+
+<body>
+<!--A tag CODE separa todas as letras com a mesma LARGURA, ou seja, torna a fonte da pagina HTML uma fonte MONO ESPAÇADA.-->
+<h1>Outras Formatações</h1>
+<h2>Código Fonte</h2>
+<p>O comando <code>document.getElementBuId ("Teste")</code>, é escrito em linguagem JavaScript.</p>
+
+<pre>
+<code>num = int(input('Digite um número'))
+if num %2 ==0:
+print(f'O número {num} é PAR!')
+else:
+print(f'O número {num} é IMPÁR!')
+print('Fim do Programa')
+</code>
+</pre>
+<!--A tag <pre> em HTML é utilizada para exibir texto pré-formatado, preservando espaços em branco, quebras de linha e outros caracteres de formatação que estão presentes no código HTML.      
+Principais usos:
+Exibir trechos de código:
+A tag <pre> é muito útil para mostrar código fonte, porque ela preserva a indentação e as quebras de linha, tornando o código mais legível.
+Exibir poemas e outros textos com formatação específica:
+Em situações onde a formatação do texto afeta o significado, como em poemas ou textos com alinhamento específico, a tag <pre> é usada para garantir que a formatação seja preservada.-->
+
+<h2>Citações Simples</h2>
+<p>Como diria o pai de um amigo: <q>O computador é um burro muito rápido</q></p>
+<!--A tag <q> significa QUOTATION, ou seja, CITAÇÃO.
+Mas não é melhor então eu simplesmente colocar a frase entre aspas, já que a tag <q> executa a mesma função?
+R: Não, porque quando colocamos o texto apenas "Entre aspas", você está apenas dando uma forma ao texto, porém, quando você usa a tag <q>, você esta deixando claro que a sua intenção é mencionar alguma coisa que alguém disse, citar algum autor, etc -->
+
+<h2>Citações Completas</h2>
+<p>Segundo CJ Tudor <abbr title="Hypertext Markup Language 5">HTML5</abbr>:</p>
+<blockquote cite="https://dragonstorebrasil.com.br/produtos/o-que-aconteceu-com-annie-ebook-ou-livro/?variant=792509172&pf=mc&srsltid=AfmBOooIjwvOwzzOGQJLmAePfC1kQ77LBKtnMhhBXfuZ-nIswAXg2XvcmJ4"><!--Quando criamos o parâmetro 'cite' dentro da tag <blockquote>, podemos deixar um link que leva até o autor da frase, ou ao livro citado, ou até mesmo um link para a compra do livro desse autor da frase-->
+<code>
+    mesmo de entrar no chalé, Gary sabe que o caso é ruim.
+    Sabe pelo cheiro doce enjoativo que escapa pela porta aberta; pelo zumbido
+    das moscas no corredor abafado e quente, e, se aquilo já não fosse indício
+    suficiente de que havia algo errado na casa, errado do pior modo possível, o
+    silêncio confirmava.>
+</code>
+</blockquote>
+
+<!--Em HTML, um bloco de citação (<blockquote>) é um elemento que indica que o texto contido é uma citação de outra fonte. Geralmente, é exibido visualmente com recuo nas margens direita e esquerda, para destacar que o texto não foi originalmente escrito pelo autor da página. A tag blockquote também pode ser usada para referenciar a fonte da citação com o atributo cite.
+Detalhes:
+
+Semântica
+A tag <blockquote> é uma tag semântica, o que significa que ela informa ao navegador que o conteúdo é uma citação longa de outra fonte. 
+
+    Visualização:
+A maioria dos navegadores recua automaticamente as margens do texto dentro da tag <blockquote>, mas isso pode ser alterado com CSS. 
+
+    Atributo cite:
+O atributo cite permite indicar a URL da fonte da citação. 
+
+Uso:
+É utilizado para destacar citações longas em um documento HTML, diferenciando-as do texto principal. 
+
+Exemplo:
+
+<p>Esta é uma citação de uma fonte externa:</p>
+<blockquote>
+Este é o texto da citação.
+<cite>Fonte: <a href="https://www.example.com">Exemplo</a></cite>
+</blockquote>-->
+
+<h2>Abreviações</h2>
+<p>Estou estudando <abbr title="Hypertext Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>. Estou adorando!</p>
+
+<h2>Texto Invertido</h2>
+<p><bdo dir="rtl">Estou aprendendo a criar coisas em <abbr title="Hypertext Markup Language">HTML</abbr>.</bdo></p>
+
+
+</body>
+</html>

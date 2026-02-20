@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  margin-top: 0px;
+}
+.comprar {
+  background: #a8f;
+  padding: 10px 20px;
+  color: #103;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.item {
+  background: #f7f7f7;
+  border: 2px solid darkgrey;
+  /* margin-bottom: 20px; */
+  padding: 20px;
+  border-radius: 4px;
+  display: grid;
+  /* ao adicionar um display:grid no item, imediatamente as margens param de colidir, pois o grid define cada espaçamento unico para cada item */
+}
+
+/* PARTE 2 DA AULA  */
+.grid {
+  display: grid;
+  /* grid-template-columns: 50% 50%; */
+  /* grid-template-columns: 1fr 2fr; */
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+/* OBS SOBRE A AULA:
+1 - Ao usar porcentagem, teremos o problema de que ele irá criar uma barrinha de scroll horizontal, pois usará os valores 50% 50% + os 20px do GAP, dessa forma, porcentagem não seria uma boa ideia nesse caso, pois iria "estourar" as medidas do elemento que envolve eles.
+
+2 - O elemento a (link), não ocupa mais apenas o tamanho do conteúdo, agora ele não se comporta mais como um elemento inline, e sim como um elemento de display grid.
+*/
+
+/* 5. GRID
+===========================================================================
+Organiza em linhas E colunas ao mesmo tempo
+Ótimo para layouts complexos
+
+Para usar, você coloca display: grid no elemento pai.
+
+Exemplo prático:
+Imagine que você quer fazer um site com cabeçalho, menu lateral, conteúdo principal e rodapé. Com grid, você cria essas áreas e posiciona tudo certinho.
+
+# GRID-TEMPLATE-COLUMS
+======================
+Essa propriedade define "quantas colunas" seu grid vai ter e "qual o tamanho" de cada uma.
+
+FORMAS DE USAR:
+===============
+
+3. Usando fr (fração) - MUITO USADO
+
+Divide o espaço disponível em frações, distribuindo o espaço que sobra entre os elementos em partes iguais ou diferentes, você quem vai escolher.
+
+.grid-template-columns: 1fr 2fr 1fr;
+Primeira coluna: 1 parte
+Segunda coluna: 2 partes (o dobro)
+Terceira coluna: 1 parte
+É flexível e se adapta ao tamanho da tela
+
+4. Usando repeat() - para não repetir
+grid-template-columns: repeat(3, 1fr);
+Cria 3 colunas iguais
+Mesmo resultado que: 1fr 1fr 1fr
+Mais prático quando tem muitas colunas
+
+6. auto
+grid-template-columns: auto 1fr auto;
+auto se ajusta ao conteúdo
+Útil para menus ou barras laterais
+
+1. Tamanho fixo em pixels
+.grid-template-columns: 200px 200px 200px;
+.Cria 3 colunas, cada uma com 200px
+.Tamanho não muda
+
+2. Usando porcentagem
+.grid-template-columns: 30% 70%;
+Primeira coluna ocupa 30% da largura
+Segunda coluna ocupa 70%
+
+0. none
+Esconde o elemento completamente
+Como se não existisse na página
+
+5. Misturando unidades
+grid-template-columns: 200px 1fr 1fr;
+Primeira coluna fixa em 200px
+As outras duas dividem o espaço restante igualmente
+
+EXEMPLO PRÁTICO:
+===============
+.container {
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr;
+  gap: 20px;
+}
+Isso criaria um layout com:
+Menu lateral fixo de 250px
+Duas áreas de conteúdo que dividem o resto do espaço igualmente */

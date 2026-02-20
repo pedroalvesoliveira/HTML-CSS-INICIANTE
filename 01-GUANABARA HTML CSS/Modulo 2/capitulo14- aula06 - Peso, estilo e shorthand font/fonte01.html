@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peso, estilo e shorthand font</title>
+        <style>
+    @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+    
+    body{
+        font-family: 'Work Sans';
+        /* peso da fonte: font-weight */
+        
+        /* pesos relativos: lighter, normal, bold, bolder */
+        
+        /* variações numéricas de font-weight: 100-900 (começa em 100, e vai até 900), porém, quase nenhuma fonte tem essas medidas numéricas*/
+       
+        h1{
+            /* font-family: 'Work Sans', sans-serif;
+            font-weight: bolder;
+            font-size: 3em;
+            font-style: italic; */
+
+            /* shorthand font
+            - font-style -> font-weight -> font-size -> font-family
+             */
+             font: italic bolder 3em 'Work Sans';
+
+        }
+        h2{
+            font:bold 2em 'work sans'
+        }
+        
+
+
+
+    }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com Fontes</h1>
+    
+    <h2>Peso, estilo e shorthandfont</h2>
+        <p>Primeiramente, para eu ver o peso da fonte, eu não posso usar fontes simples, pois elas só tem um peso (ou são muito "gordinhas" ou "muito magrinhas", ou ela é normal, ou ela é negrito).
+        </p>
+        <p>
+            Para conseguir enxergar como funciona o peso da fonte, usaremos uma fonte externa chamada Work Sans
+        </p>
+    
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, facilis, earum officiis sint iste culpa pariatur ad eligendi, expedita hic eius. Iste eaque veniam laborum nisi fugiat incidunt veritatis ullam.</p>
+    
+    <h2>Subtitulo do exercício</h2>
+    
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, mollitia perspiciatis? Rerum, unde. Nesciunt omnis dicta ut sint, tempore adipisci ea vero alias voluptatem officiis voluptates necessitatibus nam, consequatur aspernatur.</p>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+
+    <form>
+        <label for="options">Choose an option:</label>
+        <select id="options">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+        </select>
+
+    </form>
+
+
+
+    <!-- <form>       
+        <label for="Nome De Usuário">Nome de Usuário</label>        
+        <input id="Nome De Usuário" type="checkbox"><br/>      
+        <input type="number" placeholder="Digite sua Idade"><br/>
+        <input type="email" placeholder="Digite seu E-mail"><br/>
+        <input type="password" placeholder="Digite sua senha"><br/>
+        <input type="url" placeholder="Digite uma url"><br/>
+        <input type="search" placeholder="Em qual estado você mora?"><br/>
+        <input type="number" value="182"><br/>
+    </form> -->
+
+
+
+</body>
+
+</html>
+
+<!-- FORMS 
+==============================================================================
+- Um dos elementos mais importantes e versáteis do HTML.
+Forms e seus campos de entrada nos permitem coletar dados dos usuários, processa-los, e até mesmo fornecer responsividade na página, caso isso seja necessário.
+- São essenciais por varios motivos:  nos permitem criar campos de texto, senhas, checkboxes, botões, cadastros, lista de afazeres, seção de comentários, fazer uploads de arquivos e MUITO MAIS.
+
+- Para processar a informação coletada pelo elemento <form>, usa-se uma linguagem de programação como JavaScript e PHP, mas com o HTML ja teremos controle dos tipos de campos de entrada, portanto você deve saber em HTML qual tipo de informação deseja processar. 
+
+- <form action=""></form>
+Por padrão, a tag <form> ja sugere um atributo chamado action, que necessita de uma linguagem de programação como PHP e por enquanto, nos manteremos focados apenas no elemento, removendo o atributo action.
+
+-   <form>
+    <input type="text"> 
+    </form>
+
+-Para criar o campo de entrada usamos o elemento <input>, que é uma self-closing-tag, significando que não possui conteúdo.
+O atributo type determina o tipo de campo de entrada.
+Usamos um segundo atributo chamado placeholder para deixar uma dica do que deve ser digitado no campo de entrada específico.
+
+- O atributo value determina o valor inicial do campo de pesquisa. Quando você for coletar dados dos usuários usando JavaScript, você devera acessar este atributo, pois contém as informações inseridas pelo usuário.
+
+- O atributo for na tag <label> do HTML associa um rótulo de texto a um elemento de formulário específico (como <input>, <textarea>), usando o id correspondente. Ele melhora a acessibilidade (leitores de tela) e usabilidade, permitindo clicar no texto para ativar o campo.
+
+<label for="Nome De Usuário">Nome de Usuário</label>        
+        <input id="Nome De Usuário" type="text"><br/>
+
+- Agora ao clicar em Nome do usuário o cursor do campo de texto irá se ativar automáticamente, criando uma interatividade na página.
+    Embora isso não caiba muito neste contexto em qual aplicamos aqui, a tag label se tornará mais util quando estivermos usando outros tipos de input fields, como checkboxes por exemplo.
+
+<label for="Nome De Usuário">Nome de Usuário</label>        
+<input id="Nome De Usuário" type="checkbox"><br/>
+
+Agora, ao clicarmos no nome de usuário, estaremos também ativando e desativando a checkbox. Este recurso é especialmente útil para realizar tarefas do tipo afazeres ou lista de compras.
+
+LEMBRE-SE
+
+o atributo for do elemento label, e o atributo id do elemento input, são os responsáveis por essa atividade de unir o nome a caixa da checkbox e lhes dar interatividade entre si. 
+
+Em caso de multiplos elementos, certifique-se que cada id é único e que você marcou o id correto no atributo for.
+
+LISTAS SUSPENSAS
+==============================================================================
+Uma lista suspensa (dropdown) em HTML é criada principalmente com a tag <select> para formulários, permitindo selecionar uma opção entre várias de forma compacta. A estrutura básica usa <select> para conter o menu e <option> para cada item, economizando espaço na tela. 
+
+<label for="opcoes">Escolha uma opção:</label>
+<select id="opcoes" name="opcoes">
+  <option value="opcao1">Opção 1</option>
+  <option value="opcao2">Opção 2</option>
+  <option value="opcao3">Opção 3</option>
+</select>
+
+-Lembrando, aqui o atributo value está sendo colocado para identificação no javascript, colocamos um label na lista suspensa para criar aquela interatividade marota e apenas garantimos que o atributo id da tag select, e o atributo for da tag label estejam EXATAMENTE COM O MESMO NOME.
+
+-->

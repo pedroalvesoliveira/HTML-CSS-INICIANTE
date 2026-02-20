@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    font-size: 62.5%;
+    --nav-bg-color: #121212;
+    --nav-text-color: white;
+    --button-bg-color: #0052ce;
+    --button-text-color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* medida da caixa do navegador */
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.6rem;
+
+    background: var(--button-bg-color);
+    border-radius: .8rem;
+    color: var(--button-text-color);
+}
+
+nav{
+  
+    display: flex;
+    /* flex-direction: column; */
+    /* só adicionar essa linha e ja temos o menu reverso */
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 2.4rem;  /* zero encima e embaixo e 2.4rem nas laterais, colocando uma distancia interna  */
+   
+    
+    /* Até aqui, ao aplicar a flex direction: space beetwen em uma flex direction column, temos que nos atentar ao seguinte detalhe: o texto vai permanecer grudado, e nao espalhado um no topo, meio e centro, e isso se deve ao fato de que EM UM DOS PRINCIPIOS DE CAIXA, a altura ela é exatamente do tamanho do conteúdo, portanto, teremos que declarar uma altura com valor de 100vh da tela, podendo assim perceber o space between funcionando normalmente, porem no eixo vertical, devido a declaração flex-direction:colum */
+
+    /* height: 100vh; */
+
+    background-color: var(--nav-bg-color);
+    color: white;
+    height: 6rem;
+}
+nav img {
+    height: 30px;
+}
+
+ul{
+    
+    display: flex;
+    list-style: none;
+    gap: 3rem;  /* para eu colocar espaço entre os elementos do display flex, basta usar propriedade gap. Neste caso foi colocado o valor de 3rem(30px).*/
+    
+   align-items: center;
+   /* para alinhar os itens*/
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    font-size: 62.5%;
+    --nav-bg-color: #121212;
+    --nav-text-color: white;
+    --button-bg-color: #0052ce;
+    --button-text-color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* medida da caixa do navegador */
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.6rem;
+
+    background: var(--button-bg-color);
+    border-radius: .8rem;
+    color: var(--button-text-color);
+}
+
+nav{
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 2.4rem;  /* zero encima e embaixo e 2.4rem nas laterais, colocando uma distancia interna  */
+   
+    
+    /* Até aqui, ao aplicar a flex direction: space beetwen em uma flex direction column, temos que nos atentar ao seguinte detalhe: o texto vai permanecer grudado, e nao espalhado um no topo, meio e centro, e isso se deve ao fato de que EM UM DOS PRINCIPIOS DE CAIXA, a altura ela é exatamente do tamanho do conteúdo, portanto, teremos que declarar uma altura com valor de 100vh da tela, podendo assim perceber o space between funcionando normalmente, porem no eixo vertical, devido a declaração flex-direction:colum */
+
+    /* height: 100vh; */
+
+    background-color: var(--nav-bg-color);
+    color: white;
+    height: 6rem;
+}
+nav img {
+    height: 30px;
+}
+
+ul{
+    
+    display: flex;
+    
+    list-style: none;
+    gap: 3rem;  /* para eu colocar espaço entre os elementos do display flex, basta usar propriedade gap. Neste caso foi colocado o valor de 3rem(30px).*/
+    
+   align-items: center;
+   /* para alinhar os itens*/
+}
+
+/* <!-- BOX MODEL
+--------------------------------------------
+Tudo é interpretado como uma caixa. Todos os elementos HTML são interpretados como caixa. E assim como uma caixa ele possui: altura, largura, preenchimento, bordas, espaços ao redor (width, heigh, content, padding, border, margin).
+--------------------------------------------
+
+DISPLAY:BLOCK
+
+Um elemento block:
+Ocupa toda a largura disponível da linha.
+Mesmo que o conteúdo seja pequeno, o elemento ocupa a linha inteira.
+Sempre começa em uma nova linha.
+Aceita normalmente:
+
+width
+height
+margin
+padding
+
+Exemplos comuns:
+div, p, h1, section
+--------------------------------------------
+
+DISPLAY:INLINE
+
+Um elemento inline:
+Ocupa apenas o tamanho do conteúdo.
+Não quebra linha.
+Não aceita width e height.
+Margens funcionam apenas na horizontal (left e right).
+
+Exemplos comuns:
+span, a, strong, em
+--------------------------------------------
+
+RESUMO RAPIDO 🧠
+
+| Característica       | block      | inline |
+| -------------------- | ---------- | ------ |
+| Quebra linha         | ✅ Sim      | ❌ Não |
+| Ocupa toda a largura | ✅ Sim      | ❌ Não |
+| width / height       | ✅ Funciona | ❌ Não |
+-----------------------------------------------------------------------
+
+DISPLAY FLEX
+Tem a ver com os elementos que estão dentro de outra caixa.
+Ao adicionarmos essa declaração de display flex, o container passa a ser chamado de flex container e as divs passam a ser chamadas de FLEX ITEMS, e o comportamento por padrão desse valor é que ele coloque uma div (ou elemento) ao lado da outra.
+
+Ao adicionarmos essa declaração de display flex, o container passa a ser chamado de flex container e as divs passam a ser chamadas de FLEX ITEMS. */
+

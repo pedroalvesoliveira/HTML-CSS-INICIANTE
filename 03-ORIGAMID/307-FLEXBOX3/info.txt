@@ -1,0 +1,52 @@
+
+-flex vs grid
+Use ambos no seu layout, eles resolvem problemas diferentes. O grid te dá controle em todos os eixos e o flexbox apenas no total de itens por linha.
+
+🔹 Diferença entre Flexbox e Grid Layout
+🔹 1) Dimensão do Layout
+
+🔹Flexbox → 1 dimensão (linha ou coluna)Grid organiza como uma tabela invisível.
+🔹Grid → 2 dimensões (linhas e colunas)Flex organiza em uma direção por vez.
+
+🔹 2) Objetivo principal
+Flexbox → alinhar e distribuir itens
+Grid → estruturar áreas/layout completo
+
+Flex = controle fino dos elementos
+Grid = controle estrutural da página
+
+🔹 3) Controle de posicionamento
+🔹Flex → fluxo natural (os itens seguem a ordem)
+🔹Grid → você define exatamente onde cada item fica
+
+/* GRID */
+.item {
+  grid-column: 1 / 3;
+}
+
+🔹 4) Quando usar cada um
+✅ Use Flexbox quando:
+🔹For alinhar botões
+🔹Centralizar elementos
+🔹Trabalhar em componentes pequenos
+
+✅ Use Grid quando:
+
+🔹Criar layout de página
+🔹Trabalhar com linhas e colunas
+🔹Precisar dividir a tela em áreas
+
+🧠 ANALOGIA SIMPLES
+Flexbox = organizar pessoas em fila
+Grid = organizar pessoas em salas numeradas
+
+📌 RESUMO CURTO PARA CADERNO
+Flex = 1D
+Grid = 2D
+
+🔹Flex organiza itens
+🔹Grid organiza estrutura
+🔹Flex é simples e fluido
+🔹Grid é estrutural e preciso
+
+

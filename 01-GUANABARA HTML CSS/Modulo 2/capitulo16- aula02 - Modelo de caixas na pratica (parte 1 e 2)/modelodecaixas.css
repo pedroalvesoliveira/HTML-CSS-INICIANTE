@@ -1,0 +1,55 @@
+h1{ /*BOX- LEVEL, porém se eu quiser transformar ele em inline-level, basta eu declarar o display como inline*/
+    background-color: lightgray;
+    height: 300px;
+    width: 300px;
+    /* display: inline; */
+
+
+
+    /* border-width: 10px;
+    border-style: solid;
+    border-color: darkslategray; */
+    /* SHORTHAND */
+    border: 10px solid darkslategray;
+
+    /* padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px; */
+    /* SHORTHAND */
+    padding: 10px 10px 10px 10px;
+    /* OBS IMPORTANTE
+    Se eu declarar paddindg com apenas 10px uma unica vez, o programa vai entender que todos os 4 lados do padding são de 10px e já vai aplica-los automaticamente.
+    Se eu declarar dois valores (ex: padding: 10px 20px), o programa vai aplicar 10px encima e embaixo, e 20px na esquerda e direita automaticamente.
+
+    /* margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    margin-left: 20px; */
+    /* SHORTHAND */
+    margin: 20px 20px 40px 20px;
+
+    /* outline-width: 5px;
+    outline-style: dashed;
+    outline-color: blueviolet; */
+    /* SHORTHAND */
+    outline: 5px dashed blueviolet;
+
+
+    /* OUTLINE 
+    É uma declaração em css que fica entre a margem e a borda, só que DENTRO DA MARGEM.
+    Podemos usar o mesmo esquema que fizemos a borda.
+    */
+        
+    /* Podemos usar também a margin:auto para centralizar-mos a caixa desejada, dessa forma ela ficará responsiva a qualquer tamanho de tela, e nao terá erros */
+    
+    /* margin: auto; */
+}
+
+a{ /*INLINE-LEVEL*/
+    border-width: 10px;
+    border-style: solid;
+    border-color: red;
+    padding: 10px 10px 10px 10px;
+}
+

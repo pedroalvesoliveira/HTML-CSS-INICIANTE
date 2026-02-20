@@ -1,0 +1,20 @@
+ /* Pseudoclasses tem que estar ligadas a um elemento ou a uma classe.
+    Elas estão ligadas ao ESTADO de um determinado elemento dentro do HTML (se o elemento esta ativo, se ele está marcado, se ele está vazio, se ele está habilitado) -->
+   
+      id no html  = # em css 
+      class no html = . em css 
+        : chama uma pseudoclasse no css 
+         :: chama um pseudoelemento no css  */
+
+        div{
+            display: inline-block;/*coloca as divs todas na  mesma linha*/
+            background-color: lightgrey; /*Cor de fundo de cada div*/
+            border:1px solid black; /*borda com largura de 1px,tipo solida, de cor preta*/
+            text-align: center; /*posição do texto: centro*/
+            height: 200px; /*altura*/
+            width: 200px;/*largura*/
+        }
+div:hover /*neste caso, a div é um elemento, e o :hover, é a pseudoclasse do elemento div.
+O hover é uma configuração de estado, ou seja, as divs só vão ficar amarelas quando eu passar o mouse encima delas, caso contrário, permanecerá normal*/{
+    background-color: yellow;
+}

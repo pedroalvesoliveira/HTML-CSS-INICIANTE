@@ -1,0 +1,132 @@
+
+Perfeito, agora dá pra ver claramente que você está aplicando Grid do jeito certo 👌
+Vou explicar o que está acontecendo no layout, por que funciona e onde estão os conceitos-chave de Grid que você acabou de usar (mesmo sem perceber).
+
+1️⃣ body como GRID (estrutura global)
+body {
+  display: grid;
+  gap: 60px;
+  justify-items: center;
+  margin-top: 60px;
+}
+
+O body virou um grid container.
+Cada filho direto (img.logo, .sobre, .conteudo, .rodape) vira um item do grid.
+justify-items: center → centraliza todos os filhos no eixo horizontal.
+
+🧠 Conceito importante:
+justify-items alinha itens individuais, diferente de justify-content que alinha a grade inteira
+✔️ Por isso sua logo agora fica centralizada corretamente
+
+=======================================================================================
+
+2️⃣ .sobre com FLEX (uso correto)
+.sobre {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+
+Aqui você aplicou a regra de ouro moderna:
+GRID PARA ESTRUTURA | FLEX PARA COMPONENTES
+
+.sobre é um componente
+
+Flex resolve melhor alinhamento de links em linha
+
+flex-wrap evita quebra feia em telas menores
+
+✔️ Uso correto
+✔️ Sem exagero
+✔️ Flex no lugar certo
+
+=======================================================================================
+
+3️⃣ .conteudo = GRID 2 COLUNAS (layout real)
+.conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+}
+
+Isso cria:
+| Introdução | Imagem |
+| Subtítulo  | Vantagens |
+
+🧠 Aqui entra o verdadeiro poder do Grid:
+
+Layout bidimensional.
+Elementos não precisam estar “em linha”.
+Fluxo é visual, não só linear.
+
+=======================================================================================
+
+4️⃣ .introducao usando ALIGN-CONTENT (conceito avançado)
+
+.introducao {
+  display: grid;
+  align-content: center;
+  justify-items: end;
+}
+
+Isso é MUITO importante 👇
+
+align-content: center
+Centraliza o bloco de conteúdo verticalmente
+Funciona porque há espaço sobrando
+
+justify-items: end
+Alinha textos e botão à direita
+
+🧠 Você aplicou exatamente o conceito:
+align-content só funciona quando sobra espaço
+
+✔️ Uso correto
+✔️ Uso consciente
+✔️ Uso avançado
+
+=======================================================================================
+
+5️⃣ .vantagens-item = GRID de micro-layout
+
+.vantagens-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+Cria isso:
+[ ícone ] [ título ]
+[        ] [ texto  ]
+
+
+.vantagens-item p {
+  grid-column: 2;
+}
+🧠 Aqui você usou posicionamento explícito de grid
+
+Texto forçado para a segunda coluna.
+Layout limpo.
+Sem gambiarras com margin.
+Isso é Grid no nível profissional.
+
+6️⃣ .rodape ocupando a largura toda
+
+.rodape {
+  width: 100%;
+}
+✔️ Necessário porque:
+O body centraliza os itens
+Sem width: 100%, o rodapé ficaria “encaixotado”
+
+
+📌 RESUMO FINAL (anotável)
+body como grid → estrutura geral
+justify-items → alinha filhos
+grid-template-columns → layout real
+align-content → centraliza blocos
+
+Grid para estrutura
+Flex para componentes
+Grid pode existir dentro de Grid
+Layout sem gambiarras

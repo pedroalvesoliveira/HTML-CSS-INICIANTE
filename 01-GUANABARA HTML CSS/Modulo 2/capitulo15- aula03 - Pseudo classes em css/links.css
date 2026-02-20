@@ -1,0 +1,53 @@
+ /* Seletores Personalizados
+    # = id
+    . = class
+    := pseudo-class  
+    :: pseudo-element  
+    > = children  */
+
+    body{
+            font-family: helvetica, arial, serif;
+        }
+        a{
+            color:red;
+            text-decoration : none;
+            font-weight: bold;
+
+        }
+        /* Neste caso, visited é uma pseudoclasse do seletor a, que é usada para alterar a cor de um link que ja foi visitado. Em palavras simples: ela serve para mudar a cor ou a aparência de um link para indicar ao usuário: "você já passou por aqui"*/
+        a:visited{
+            color: blue;
+        }
+        a:hover{
+            text-decoration: underline;
+            color:black
+        }
+        /* A pseudoclasse :active no CSS é utilizada para selecionar e estilizar um elemento no exato momento em que ele está sendo ativado pelo usuário. 
+        Na maioria dos casos, o estado :active ocorre entre o momento em que o usuário clica com o botão principal do mouse e o momento em que o botão é solto. */
+
+        a:active{
+            color: yellow;
+        }
+
+        /* também temos os PSEUDOELEMENTOS, ele pode agir nas classes, nos elementos, nos IDS, ele mexe diretamente no conteúdo periférico do elemento */
+        a::after{
+        content:'→';
+        text-decoration: none;
+        font-weight: normal;
+        color:red;
+        margin-left: 5px;    
+
+        }
+        a::before{
+            content:'→';
+            margin-right: 5px;
+            color: red;
+            font-weight: normal;
+            margin-right: 5px;
+        }
+        .especial::after{
+            content:'✈' ;
+        }
+        .especial::before{
+            content:'☂' ;
+        }

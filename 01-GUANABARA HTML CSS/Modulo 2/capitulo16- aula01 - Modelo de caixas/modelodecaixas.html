@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos de Caixas</title>
+</head>
+<body>
+<!-- É realmente a ideia de ter uma caixa. Em um documento HTML tudo aquilo que é exibido na tela, é exibido em forma de caixa, e elas podem estar uma caixa dentro da outra, formando uma hierarquia de caixas. Ao colocarmos um elemento dentro do outro, o termo usado é ANINHAMENTO (como se fosse um ninho mesmo). 
+ Na hora de formatar com o CSS (quando eu criar um seletor para h1 por exemplo), eu vou estar configurando a caixa que está exibindo esse elemento.
+ 
+ Uma caixa tem um tamanho: height(altura) e width (largura).
+ Tem como traçar uma linha em volta da caixa (em CSS chamamos um seletor, e dentro dele colocamos a declaração border).
+
+ A borda sempre vai estar extremamente grudada ao texto do seu elemento, então podemos usar a declaração PADDING, que vai servir para dar aquela distanciada da borda da caixa do texto ou imagem do seletor que você escolheu.
+
+ O PADDING, é um espaço interno e pode ser calculado em qualquer uma das direçoes (encima, abaixo, esquerda ou direita).
+
+ Da borda pra dentro, existe um espaço, e se eu tiver uma outra caixa embaixo desse seletor h1, pode acontecer dele ficar grudado um ao outro, dessa forma usaremos uma declaração que nos dará um espaço externo em relação ao seletor selecionado, e essa declaração se chama MARGIN.
+ 
+ RESUMINDO: da borda pra dentro, temos um espaço interno chamado PADDING, da borda pra fora temos um espaço externo, chamado MARGIN.
+
+ Do lado de fora da borda, ainda podemos criar um outro tracejado, dentro do espaço do MARGIN, chamado de OUTLINE, seria um contorno (a borda é dentro dp elemento, o OUTLINE é fora do elemento).
+
+ Tudo isso dito no texto acima, é a ANATOMIA DE UMA CAIXA.
+ -->
+
+<!-- TIPOS DE CAIXA 
+
+BOX-LEVEL: Um elemento dito block-level sempre vai se iniciar em uma nova linha e vai ocupar a largura total do elemento onde ele está contido. Se não estiver contido em nenhuma outra caixa, ele vai ocupar 100% da largura do viewport definido no <body>.
+RESUMINDO: sempre que a caixa for começar, ele vai pular para a linha de baixo, vai ocupar a largura inteira da tela, e vai pular para a próxima linha antes de continuar o conteúdo.
+
+INLINE-LEVEL: um elemento inline-level, sempre que a caixa for começar, ele não vai pular para a próxima linha, e sim, criar a caixa exatamente do tamanho para conter o conteúdo do seu elemento, e depois que ele termina, ele não vai quebrar a linha, ele apenas pula para o lado e contínua o conteúdo na frente da caixa, e ai eu consigo ter uma caixa do tipo inline-level dentro da mesma linha do texto.
+
+<!- EXEMPLOS DE TAGS BOX E INLINE LVL 
+
+div: sempre que você usa uma div, você está usando um block-level.
+span: ela é uma expansão de código, ele não quebra a linha.
+
+QUANDO USAR DIV OU SPAN?
+
+Um div, você usa quando você quer quebrar a linha, criar um box que ocupe a largura inteira na tela, e continuar seu código a partir da linha de baixo.
+
+Ja o span, você usa quando quiser inserir um elemento, porém, que o proximo elemento ou texto ou imagem, continuem ao lado desse span que você inseriu.
+
+MAIS EXEMPLOS:
+
+BOX-LEVEL:
+<div>
+<h1>
+    <p>
+        <main>
+            <nav>
+                <article>
+                    <aside>
+                        <footer>
+                            <footer>
+                                <form>
+                                    <video>
+
+INLINE-LEVEL:
+<a>
+    <code>
+        <small>
+            <strong>
+                <em>
+                    <sup> - <sub>
+                        <label>
+                            <button>
+                                <input>
+                                <select>
+
+-->
+<h1>Modelos de caixas: Primeiros Passos</h1>
+<p>É um conjunto que vai facilitar MUITO pra você conseguir organizar as partes do seu site.<p>
+
+
+
+</body>
+</html>

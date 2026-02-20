@@ -1,0 +1,22 @@
+body{
+    font-family:Helvetica;
+    /* Neste caso, a font family : Helvetica; vai valer apenas para o texto dos parágrafos, pois o conteúdo dos titulos (h1 e h2) será estilizado com uma letra diferente, porém é um conjunto que está recomendado no w3c, (w3schools.com) */
+        
+}
+
+    p{
+        font-size: 18px;
+        /* tamanho da fonte dos parágrafos */
+        padding: 5px;
+        /* colocando uma pequena margem interna de 5px, "empurrando o texto pra dentro" */
+    }
+    
+    h1, h2 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+       
+    /* É de extrema importância que você pesquise sobre CSS FONT SAFE COMBINATIONS, pois nem todos os dispositivos terão a fonte declarada no seu CSS, então, declaramos uns 3 tipos de fontes diferentes no font family, fazendo que, caso o dispositivo não encontre o primeiro estilo declarado, ele procure pelos estilos que estão declarados logo a seguir, permitindo assim que o texto seja lido em qualquer dispositivo, dai entra a importância das SAFE combinations, pois você não pode sair declarando qualquer fonte que desejar e pronto, devem haver padrões, porem, em html5 e Css3, o próprio VScode ja as sugere quando você declara o font-family (AMÉM)! */
+
+    /* EXCESSÕES (Familias Genéricas)
+    Ao declarar o font family como: sans-serif, serif ou monospace, qualquer dispositivo irá aceitar, pois todos eles tem alguma fonte de um dos três tipos declarados, e vai escolher aleatóriamente uma fonte que contenha a característica de alguma dessas três familias de fonte.
+    */

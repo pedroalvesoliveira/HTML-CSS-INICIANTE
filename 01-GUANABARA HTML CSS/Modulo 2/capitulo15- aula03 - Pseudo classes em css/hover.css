@@ -1,0 +1,19 @@
+   body{
+            font-family:helvetica, arial, sans-serif;
+                  
+        }
+        /*ao utilizar o simbolo > ( que chamamos de CHILD, ou seja, FILHO) , nesse caso, significa que ele é um parágrafo que é filho de uma div específica, ou seja, tudo que for feito dentro desse SELETOR div selecionado, será aplicado apenas nele */
+        div > p{
+         display: none;   
+        }
+
+        div:hover>p{
+            display:block;
+            color:white;
+            background-color: red;
+            width: 300px;
+        }
+
+        div:hover{
+            color: red;
+        }

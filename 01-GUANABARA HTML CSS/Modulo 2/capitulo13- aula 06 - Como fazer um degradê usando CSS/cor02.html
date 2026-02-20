@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degrade em CSS</title>
+    <style>
+        /* Configurações globais das CSS */
+        *{ 
+            height: 100%; /*configurando a altura em 100% para o comando degrade ficar fluido de cima pra baixo ou vice-versa*/
+        }
+        body {
+             background-image: linear-gradient(to right, #FE0352 10%, #FC00CB, #8E03F9,#FFC900, #F25C05);
+            background-attachment: fixed;
+            }
+         
+        /* Para fazermos um fundo com uma cor solida, usamos a propriedade "background-color", mas para fazer-mos um tom em degradê, usamos a propriedade background-image:linear-gradient().
+        
+        linear-gradient(): função dentro da propriedade background image que permite  você indicar primeiramente a direção, e logo após a direção você pode indicar quantas cores quiser.
+
+        DIREÇÕES DO DEGRADÊ:
+        to bottom: de baixo pra cima
+        to right: da direita pra esquerda
+        to left: da esquerda para a direita
+        to top: de cima pra baixo
+        */
+        
+    </style>
+</head>
+
+<body>
+    <h1>Testando Gradiente</h1>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+body {
+    background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+    height: 97vh;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: right center;
+
+
+
+}
+
+/* Ao declararmos background-position: center center, a imagem ficou no centro, devido o conteúdo do body (neste caso em específico) era quase nada, por isso a imagem ficou pequena e no topo da tela.
+
+Para corrigirmos isso, usamos a declaração height com um valor em Vh, que significa viewhight, e tendo em consideração que essa declaração é relacionada a altura do seletor em que está sendo inserida, e quando esta em 100Vh, cobrirá 100% da altura da viewport (A altura da tela, meus amigos.)
+
+background-position: center center; 
+Os valores dentro da declaração background-position são orientadas da seguinte maneira: primeiro colunas, depois linhas.
+
+background-position: right right; - posiciona a imagem iniciando-a da coluna da direita, e posteriormente colocando a imagem na linha de baixo, portanto, é uma imagem que ficará no canto inferior direito. 
+
+
+
+
+*/

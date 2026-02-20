@@ -1,0 +1,10 @@
+body{
+    /* background-image: url('img/wallpaper001.jpg'); Hospedando imagem local */
+    background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');/* Hospedando imagem remotamente, com um grande lembrete de que caso essa imagem ficar fora do ar, imagem do seu site automáticamente também cai */
+    background-size: 100px 100px;
+    background-repeat: no-repeat;/*impede que a imagem fique se repetindo na tela*/
+    /* background-repeat: repeat-x; repete imagem somente no eixo-x */
+    /* background-repeat: repeat-y; repete imagem somente no eixo-y */
+    /* Lembrando que todos os valores de background repeat começam posicionados no canto superior esquerdo da tela */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

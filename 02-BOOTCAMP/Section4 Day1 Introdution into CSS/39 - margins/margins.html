@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin</title>
+    <style>
+.box{
+    background-color: lightgreen;
+    height: 50px;
+    margin: 20px;
+    
+   
+}
+    </style>
+</head>
+
+<body>
+
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+    
+
+</body>
+</html>
+
+<!-- MARGIN
+ =================================================
+- É o espaço de fora da borda de um elemento. Ela separa o elemento de seu elemento vizinho, criando um espaço em volta deles.  
+ 
+- Primeiramente colocamos em 3 divs da classe box: 
+ .box{
+    background-color: lightgreen;
+    height: 50px;
+    margin: 20px;
+}
+ /* SHORTHANDS
+    margin: 20px (top) 10px (right) 15px(bottom) 5px (left) 
+    margin: 20px (top/bottom) 10px (right/left) */
+       
+
+- De primeira não conseguimos vizualizar nada, pois as 3 divs estavam sem espaço entre elas. Ao adicionarmos a margem de 20px elas se separaram, ficando clara a localização das três.
+
+IMPORTANTE
+Ao retirarmos a margin do código, os elementos irão grudar um no outro novamente, porém, podemos reparar que eles ainda ficam com um espaço entre as divs e as bordas.
+Isso acontece porque o CSS tem como padrão o valor 8px, e devemos nos manter atentos a isso. Para removermos a margin:8px que o CSS coloca como padrão, basta colocarmos dentro do seletor body o atributo margin com o valor de 0, lembrando que quando um valor de um atributo for 0, não precisamos especificar o tipo de unidade.
+
+
+-->

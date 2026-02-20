@@ -1,0 +1,95 @@
+/* AULA 1-  Estilos Gerais ↓ */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 40px;
+}
+h1,
+p {
+  margin: 0;
+}
+h1 {
+  font-size: 48px;
+  line-height: 1;
+  /* line-height:1 - diminui o espaçamento entre as linhas, caso a palavra Stark fique embaixo do h1*/
+}
+p,
+span {
+  font-size: 20px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.comprar {
+  background: #a8f;
+  padding: 10px 20px;
+  color: #103;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+.preco {
+  background: #e9d8d8;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+/* INCIO DA AULA */
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  /* align-items: center; */
+  /* place-items: start end;  align / justify  */
+}
+
+.titulo {
+  grid-column: 2;
+  text-align: right;
+}
+
+.preco {
+  place-self: start end;
+}
+
+.descrição {
+  text-align: right;
+}
+
+.comprar {
+  align-self: start;
+  text-align: center;
+}
+/* 
+De início ja reparamos um problema: ao diminuir a tela, o titulo da página h1, quebra o elemento para a próxima linha, pois não temos nenhum alinhamento nos itens.
+NO QUE ISSO IMPACTA NO SEU LAYOUT?
+Impacta na linha do lado também, pois não tem como uma linha ser menor que a outra e nem colunas. Por padrão o elemento h1 e span estão expandindo o maximo que eles conseguirem para ocupar o espaço do container, e não era esse o objetivo. No elemento span, queremos colocar apenas um pequeno background envolvendo o valor. Para isso, precisamos alinhar os itens usando o align-items.
+
+1- .grid foi colococado align-items:center 
+O que vai definir o alinhamento central é sempre o elemento maior, pois ele não tem espaço sobrando para alinhar, porém, nesse caso havia espaço sobrando para alinhar ao centro o span, por isso a propriedade funcionou nesse elemento.
+
+2- place-items: também pode ser usado por aqui. Lembrando que caso for usar shorthant, a ordem é align/justify.
+
+/* 2º PARTE DA AULA 
+OCORREU UMA MUDANÇA GERAL NA ESTRUTURA DO LAYOUT.
+
+3-apagamos o .foto, o place-content, colocamos o .titulo ao lado extremo direito do container, mas para isso precisamos usar o bom e velho TEXT-ALIGN:RIGHT, pois TEMOS QUE ENTENDER A DIFERENÇA DO CONTEÚDO EM SI E DA CAIXA QUE OS ENVOLVE ( DOS ITENS E DO ELEMENTO PAI. ) 
+
+4- Agora eu quero alinhar SOMENTE o texto do span (que no caso é o texto do preço mostrado na tela da página), para isso acontecer, usaremos a propriedade align-self.
+-No caso usamos a propriedade place-self: start end; 
+
+AGORA EU QUERO ALINHAR APENAS O TEXTO DO BOTÃO AO CENTRO DO ELEMENTO, COMO FAÇO?
+5- .comprar adicionado align-self:start, para posicionar nosso botao ao topo.
+6- .comprar adicionado justify-self:center, porém aqui aconteceu um erro no layout, pois mudou a estrutura do elemento, e o botão voltou a seu tamanho normal, mas nós queremos apenas alinhar o texto do botão sem reduzir o elemento de tamanho. 
+
+7- .comprar{ 
+text-align:center}
+ e problema resolvido.
+
+8- .descrição adicionado um text-align:right.
+
+*/
