@@ -1,0 +1,157 @@
+Landmarks
+============================================================
+Tags que marcam pontos de referência (landmarks) foram introduzidas no lançamento do HTML5. Antes era utilizado o atributo role.
+Visualmente o efeito que essas tags possuem é similar ao das divs, elas não mudam em nada o conteúdo/apresentação. (section altera os headers).
+
+============================================================
+<main>
+============================================================
+A tag <main> marca o conteúdo principal da página.
+Exemplos:
+Blog: conteúdo do artigo. Comércio eletrônico: descrição/imagem/preço do produto.
+Observação:
+Utilize uma por página.
+
+============================================================
+<nav>
+============================================================
+A tag <nav> marca um bloco de navegação.
+Exemplos:
+Geralmente utilizado para a navegação primária e secundária do site.
+
+Observação:
+Evite o uso de diversas tags nav, use apenas para a navegação essencial.
+Temos o atributo aria-label: Todo atributo que começa com aria, é bem focado em acessibilidade. O que o aria-label faz é dar uma etiqueta para a tag (no voiceover).
+Ao definirmos aria-label="primária" , o voiceover vai dar um titulo e vai falar "primária navegação", quer dizer que é a navbar primária do site. Caso eu não defina o aria-label="primária", caso eu tenha 3 nav bar no meu site, o voiceover vai ler apenas: "navegação, navegação, navegação"
+
+============================================================
+<section>
+============================================================
+
+A tag section pode ser utilizada para agrupar o conteúdo do site em diferentes regiões.
+A section deve ser um artigo dividido em pequenas seções.
+
+Diferente do ARTICLE, ELE NÃO CRIA AUTOMATICAMENTE UM PONTO DE REFERENCIA (LANDMARK) NO VOICEOVER, o conteúdo necessita do seu contexto para ser compreendido.
+
+Por isso precisamos definir um aria-label=Sobre a Surfbot
+
+============================================================
+- aria-label
+============================================================
+Se utilizada com o atributo aria-label cria uma região do site.
+
+Observação:
+O h1 é impactado em termos visuais quando utilizado na section. O section foi criado para melhor lidar com os headings, porém a sua idealização nunca foi implementada (até hoje 2021):
+https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html
+
+============================================================
+<article>
+============================================================
+Observação:
+Oficialmente não cria uma landmark, mas muitos leitores de tela utilizam ela como referência para marcar regiões do site. A tag é até mais consistente do que a section para marcar regiões do site.
+
+https://www.smashingmagazine.com/2020/01/html5-article-section/
+
+A tag article representa uma região do site que é autoexplicativa (não precisa do restante do site para fazer sentido). Geralmente deve conter um título (h).
+
+Exemplos:
+Lista de produtos do site, um artigo, post na rede social e outros.
+
+============================================================
+aria-label:
+============================================================
+🔹 O que é aria-label?
+
+Título da região visualmente escondido, mas lido pelo 
+leitor de tela.
+
+aria-label é um atributo ARIA usado para dar um nome acessível diretamente a um elemento, quando esse nome não está visível na tela.
+Ele cria uma descrição que será lida por leitores de tela.
+
+✅ Quando usar?
+Quando o elemento não tem texto visível
+Quando o texto visual não é suficiente
+Em botões com apenas ícones
+
+💻 Exemplo:
+<button aria-label="Fechar menu">
+  ❌
+</button>
+Visualmente: só aparece o ❌
+Para leitor de tela: “Fechar menu”
+
+============================================================
+aria-labelledby:
+============================================================
+🔹 O que é aria-labelledby?
+
+aria-labelledby também define um nome acessível, mas usa o texto de outro elemento da página como referência.
+Ou seja, ele aponta para um ID existente.
+
+✅ Quando usar?
+Quando já existe um texto visível que pode servir como descrição.
+Quando você quer reutilizar um título já presente na tela.
+
+💻 Exemplo:
+
+<h2 id="titulo-card">Plano Premium</h2>
+<div aria-labelledby="titulo-card">
+  Conteúdo do plano...
+</div>
+
+O div será identificado pelo leitor de tela como:
+“Plano Premium”
+
+🎯 Diferença Principal
+
+aria-label	
+Define o texto diretamente no atributo	
+Não precisa de elemento visível	
+Mais simples	
+ 
+aria-labelledby
+Usa o texto de outro elemento
+Mais semântico e recomendado quando possível
+Precisa de um ID existente
+
+🧠 Regra de Ouro
+Sempre prefira:
+1️⃣ Usar texto visível normal
+2️⃣ Depois aria-labelledby
+3️⃣ Por último aria-label
+Porque acessibilidade deve acompanhar a estrutura real da página.
+
+============================================================
+<aside>
+============================================================
+A tag aside é utilizada para marcar conteúdo complementar ao principal do site.
+Imagine um blog quando você vê ali no cantinho da tela: posts relacionados, vídeos mais vizualizados, lista de posts mais visitados, informações extras como a descrição de um termo usado no artigo e mais..... 
+É um conteúdo que não depende do conteúdo principal da página.
+
+Em alguns leitores de tela, como o voiceover por exemplo, não cria uma região para a ferramenta, mas por especificação ele É SIM, UMA LANDMARK QUE FOI CRIADA. 
+
+Funciona da mesma forma que os outros elementos que ja foram mostrado antes, só que serve para conteúdo extra
+
+============================================================
+<footer>
+============================================================
+A tag <footer> marca o rodapé do site, geralmente contém informação sobre os direitos autorias, quem escreveu e links para documentos relacionados.
+
+Observação:
+Apenas cria uma landmark se não estiver dentro de main, section, article ou aside.
+
+============================================================
+<header>
+============================================================
+Cria uma landmark por padrão (Ponto de Referência.)
+A tag header marca o cabeçalho do site banner, onde geralmente estão presentes a marca, navegação do site e as vezes uma informação introdutória.
+
+POR QUE FUNCIONARIA COM O LEITOR DE TELA?
+- Geralmente os leitores de tela vem com a opção de pular a navegação (navbar, banner/cabeçalho...) e ir direto para o assunto principal da página.
+Se você não envolver o conteúdo em um header, o leitor de texto não cria uma região ali e não te da a opçao de pular a navbar/banner/cabeçalho.
+
+Exemplos:
+Pode também ser utilizada para marcar o cabeçalho de regiões como o título de um artigo, data, autor e outras informações.
+
+Observação:
+Apenas cria uma landmark se não estiver dentro de main, section, article ou aside.
