@@ -1,0 +1,49 @@
+LISTAS
+=========================================
+UL
+====================================
+A tag <ul> marca uma lista de itens sem ordem (unordered list). Cada item da lista deve ser marcado com uma <li></li>
+
+Acessibilidade
+==============
+Listas são anunciadas pelo leitor de tela e o usuário é informado previamente quantos itens existem na lista.
+ 
+ORDERED LIST (<ol>) aka Numbered Lists, são listas numeradas. Usamos elas quando queremos fazer algo que um passo a passo é IMPORTANTE, tipo uma receita de bolo.
+Cada item dessa lista é representado pela tag <li></li>, que significa list, e são mostrados na nossa webpage com NÚMEROS antes de cada item.
+
+=========================================
+UNORDERED LIST (<ul>) aka Bulleted Lists
+=========================================    
+São listas onde são usados marcadores (que por padrão vem em formato redondo). Usamos elas quando queremos fazer algo onde a ordem de cada item não iterfere no resultado final.
+
+=========================================
+DESCRIPTION LIST <dl> 
+=========================================
+A tag <dl> marca uma lista de descrições (description list). A lista é criada com dois elementos <dt> e <dd>
+
+<dt>
+Marca o termo/frase a ser definido.
+<dd>
+Marca a definição do termo acima.  
+
+USADA PARA:
+1-Perguntas Frequentes
+Quais as formas de pagamento?
+Dinheiro ou Cartão de Crédito
+
+2- Possui certificado?
+Sim, emitimos certificados.
+
+Código:
+<h2>Perguntas Frequentes</h2>
+<dl>
+  <dt>Quais as formas de pagamento?</dt>
+  <dd>Dinheiro ou Cartão de Crédito</dd>
+  <dt>Possui certificado?</dt>
+  <dd>Sim, emitimos certificados.</dd>
+</dl>
+
+=========================================
+ANINHAMENTO - Também é possível mesclar as listas. Chamamos isso de aninhamento (tipo de ninhos mesmo).    
+=========================================
+
