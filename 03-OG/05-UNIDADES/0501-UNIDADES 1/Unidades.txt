@@ -1,0 +1,32 @@
+# rem
+
+Unidade relativa ao tamanho da fonte do elemento raiz html. Na maioria dos browsers com configuração padrão 1rem = 16px.
+
+# PORQUE USAR REM E NÃO O PIXEL?
+
+Mais uma vez, é uma questão de acessibilidade.
+Existem duas formas da pessoa aumentar o tamanho do browser:
+
+A MAIS COMUM: CTRL +, ou CTRL + roda do mouse.
+A MENOS COMUM: definir um tamanho de texto maior no próprio browser.
+
+Ao redefinirmos o tamanho do texto no browser, nota-se que o conteúdo que está em .rem, respeitou o valor colocado no browser e realmente aumentou o texto, já o que está em píxel se manteve do mesmo tamanho especificado em CSS, e isso É UM GRANDE PROBLEMA DE ACESSIBILIDADE. Então, a partir de agora, a principal unidade de medida usada será a rem, mas LEMBRE-SE disso:
+
+- O rem simplesmente está sendo transformado em pixel pelo browser, então pixel continúa sendo a unidade real que estaremos trabalhando, a gente "pensa em pixel" e escreve em rem.
+
+# A RELAÇÃO DO REM COM A RAIZ
+
+Outra forma do rem ser modificado é através do valor da raiz. Nese caso <html> é a raiz.
+Se eu tiver o font-size dele normal (16px), você vê que nada muda. Ao mudarmos para 32px, agora 1rem passa a ter o valor de 32 px.
+
+Mesma coisa em porcentagem: se eu aumentar o tamanho da fonte na raiz, usando 200%, vai permanecer igual, pois 200% de 16px seriam 32px.
+
+# em (NÃO RECOMENDADO)
+
+em é uma unidade relativa ao tamanho da fonte do elemento pai.
+Por exemplo, se por acaso eu tiver ele dentro de uma div, e nessa div o font-size fosse de 200px, 1em passa a ter 64px, que seriam 2x32px.
+
+# VH E VW
+
+vh representa o tamanho da altura da tela visível (viewport height) .
+vw da largura visível (viewport width). 100vw = 100% da tela.
