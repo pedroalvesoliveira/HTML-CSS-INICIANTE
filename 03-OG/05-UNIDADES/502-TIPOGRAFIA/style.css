@@ -1,0 +1,17 @@
+p {
+  font-size: 2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-style: italic;
+  line-height: 1.3;
+  text-decoration: none;
+  text-transform: lowercase;
+  text-indent: 3rem;
+  /* identa o primeiro parágrafo um pouco para frente*/
+  text-align: left;
+  text-shadow: -5px 0px 0.5px lightgrey;
+  /* valores: eixo x, eixo y, blur, cor */
+ letter-spacing: 0.3rem;
+/* cria um espaçamento entre as letras, usado em títulos quando queremos espaçar um pouquinho as letras, porém, deve ser feito com valor sutíl.*/
+
+}
