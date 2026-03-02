@@ -1,0 +1,108 @@
+# rem
+
+Unidade relativa ao tamanho da fonte do elemento raiz html. Na maioria dos browsers com configuração padrão 1rem = 16px.
+
+# PORQUE USAR REM E NÃO O PIXEL?
+
+Mais uma vez, é uma questão de acessibilidade.
+Existem duas formas da pessoa aumentar o tamanho do browser:
+
+A MAIS COMUM: CTRL +, ou CTRL + roda do mouse.
+A MENOS COMUM: definir um tamanho de texto maior no próprio browser.
+
+Ao redefinirmos o tamanho do texto no browser, nota-se que o conteúdo que está em .rem, respeitou o valor colocado no browser e realmente aumentou o texto, já o que está em píxel se manteve do mesmo tamanho especificado em CSS, e isso É UM GRANDE PROBLEMA DE ACESSIBILIDADE. Então, a partir de agora, a principal unidade de medida usada será a rem, mas LEMBRE-SE disso:
+
+- O rem simplesmente está sendo transformado em pixel pelo browser, então pixel continúa sendo a unidade real que estaremos trabalhando, a gente "pensa em pixel" e escreve em rem.
+
+# A RELAÇÃO DO REM COM A RAIZ
+
+Outra forma do rem ser modificado é através do valor da raiz. Nese caso <html> é a raiz.
+Se eu tiver o font-size dele normal (16px), você vê que nada muda. Ao mudarmos para 32px, agora 1rem passa a ter o valor de 32 px.
+
+Mesma coisa em porcentagem: se eu aumentar o tamanho da fonte na raiz, usando 200%, vai permanecer igual, pois 200% de 16px seriam 32px.
+
+# em (NÃO RECOMENDADO)
+
+em é uma unidade relativa ao tamanho da fonte do elemento pai.
+Por exemplo, se por acaso eu tiver ele dentro de uma div, e nessa div o font-size fosse de 200px, 1em passa a ter 64px, que seriam 2x32px.
+
+====================================================
+PARTE 2
+====================================================
+
+# VH E VW
+====================================================
+vh representa o tamanho da altura da tela visível (viewport height) .
+vw da largura visível (viewport width). 100vw = 100% da tela.
+
+div por padrão ocupa 100% do elemento pai, e ta pegando de ponta a ponta.
+É diferente ocupar 100% do elemento pai, e ocupar 100% da tela.
+
+- Ao colocar 100vw na div ele estoura um pouco a margem do elemento pai, porque ele soma aquela margem automática que o body ja tem, para isso colocamos body margin 0;
+
+- height:100vh faz a div ficar com o tamanho de 100% da tela. 
+
+- height:50vh faz a div ficar com o tamanho de 50% da tela.
+
+- IMPORTANTE: vh e vw não são a mesma coisa que porcentagem.
+
+- EX:
+- envolvo a div em uma section.
+
+section{
+  width: 200px;
+  background: tomato;
+}
+
+- o valor da div ainda sobrescreve o valor da section, pois a div é 50vw, ou seja, 50% da tela toda.
+- MAS SE EU ALTERAR o valor da div para width:50%
+- 50% passa a ser em relação ao tamanho de 50% DO PAI, E NÃO DA TELA.
+================================================================================
+
+- Adicionado um span dentro da div com o texto Teste.
+- Removido o height:100vh
+- Por padrão, a altura vai ser apenas a altura do conteudo, e como temos apenas uma linha de conteúdo, vemos que o tamanho fica apenas o do conteúdo mesmo.
+- Se eu adiciono um height:200px, a div passa a ter a altura de 200px porque eu forcei um valor fixo.
+
+- PORÉM, ao colocar-mos um height:100%, não acontece nada, pois 100% é relacionado a 100% do elemento pai, que no caso é o span, com o conteúdo de uma palavra apenas.
+
+- colocamos height:100vh, ai funcionou direito.
+
+================================================================================
+PARTE3
+================================================================================
+calc
+================================================================================
+calc() é uma função de css que retorna um valor com base no cálculo efetuado entre os (). Podemos combinar unidades.
+
+calc(100vw / 3)
+Representa 1/3 da tela.
+
+- Quando não sabemos o tamanho da tela:
+calc(100% - 20px)
+Remove 20px de 100%.
+
+
+
+
+
+
+
+
+body{
+  margin: 0;
+}
+
+section{
+  width: 200px;
+  background: tomato;
+}
+
+div{
+  height: 40px;
+  background: lightblue;
+  width: 50%;
+  height: 100vh;
+  }
+
+  
