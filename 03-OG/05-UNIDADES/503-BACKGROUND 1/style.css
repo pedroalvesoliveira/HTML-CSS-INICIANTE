@@ -1,0 +1,17 @@
+.bicicleta{
+  height: 600px;
+  background-color: lightblue;
+  background-image: url("img/bicicleta.jpg");
+  background-repeat: no-repeat;
+  /* background-size: 100% */
+  /* background-size: contain; */
+  background-size: cover;
+  
+
+
+
+
+
+
+
+}
