@@ -1,4 +1,4 @@
-.bicicleta{
+.bicicleta {
   height: 600px;
   background-color: lightblue;
   background-image: url("img/bicicleta.jpg");
@@ -6,12 +6,20 @@
   /* background-size: 100% */
   /* background-size: contain; */
   background-size: cover;
-  
-
-
-
-
-
-
-
+  background-position: center top;
+  /* background: #eee url(img/bicicleta.jpg) no-repeat cover center top; */
+  display: flex;
 }
+
+h1 {
+  margin: auto;
+  background: #eee;
+  padding: 1rem 2rem;
+}
+
+/* 
+- BACKGROUND é uma propriedade que serve de atalho para todos os outros "backgrounds".
+- ORDEM: color, url, repeat, posicionamento e cover.
+
+
+*/
