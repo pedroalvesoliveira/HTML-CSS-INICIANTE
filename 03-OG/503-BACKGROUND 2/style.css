@@ -20,15 +20,21 @@ h1 {
 - BACKGROUND é uma propriedade que serve de atalho para todos os outros "backgrounds".
 - ORDEM: color, url, repeat, posicionamento e cover.
 */
+.pattern {
+  height: 300px;
+  background-color: lightcoral;
+  background-image: url("img/pattern.svg");
+  background-repeat: repeat;
+  /* background-size: 100px;*/
+}
 
-/*========================================================================
+/*  
 GRADIENTE
-==========================================================================
+=========
 A função linear-gradient gera um gradiente linear na propriedade background-image.
 
 - Direção
 90deg, 45deg, to left, to right
-
 - Cores
 #000 0%, blue 50%, #fff 100%. Cor e local de início.
 */
