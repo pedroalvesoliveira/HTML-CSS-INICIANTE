@@ -1,14 +1,18 @@
 .bicicleta {
   height: 600px;
-  background-color: lightblue;
   background-image: url("img/bicicleta.jpg");
   background-repeat: no-repeat;
-  /* background-size: 100% */
-  /* background-size: contain; */
   background-size: cover;
-  background-position: center top;
-  /* background: #eee url(img/bicicleta.jpg) no-repeat cover center top; */
+  background-position: center top; /* centro eixo x / topo eixo y */
   display: flex;
+  /* 
+- BACKGROUND é uma propriedade que serve de atalho e sobrepõe todos os outros "backgrounds".
+- ORDEM: color, url, repeat, posicionamento e cover.
+*/
+  /* background-size: contain;
+  -faz com que a imagem permaneça do tamanho do container.  
+  */
+  /* background: #eee url(img/bicicleta.jpg) no-repeat cover center top; */
 }
 
 h1 {
@@ -16,10 +20,7 @@ h1 {
   background: #eee;
   padding: 1rem 2rem;
 }
-/* 
-- BACKGROUND é uma propriedade que serve de atalho para todos os outros "backgrounds".
-- ORDEM: color, url, repeat, posicionamento e cover.
-*/
+
 .pattern {
   height: 300px;
   background-color: lightcoral;
