@@ -1,0 +1,111 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  margin-top: 0px;
+}
+.comprar {
+  background: #a8f;
+  padding: 10px 20px;
+  color: #103;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.item {
+  background: #f7f7f7;
+  border: 2px solid darkgrey;
+  /* margin-bottom: 20px; */
+  padding: 20px;
+  border-radius: 4px;
+  display: grid;
+}
+
+.grid {
+  display: grid;
+  height: 800px;
+  /* grid-template-columns: 50% 50%; */
+  /* grid-template-columns: 1fr 2fr; */
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-columns: auto auto;
+  gap: 20px;
+  /* justify-content: space-evenly;
+  align-content: space-evenly; */
+  place-content: center space-evenly;
+}
+
+/* 
+Ao usarmos o fr, não sobra espçamento para que o alinhamento ocorra, o espaço que vemos entre as caixas é definido pelo gap:20px que está declarado no seletor .grid 
+
+PARTE 1
+=======
+COMO FAÇO PARA TER SORBRA NO ALINHAMENTO?
+
+1- Inicialmente defina duas colunas de valores fixos: 300px cada uma.
+  Por padrão, as colunas estarão alinhadas a esquerda.
+2- justify-content:center e pronto, as colunas estarão alinhadas ao centro :)
+3- Duplicamos as divs no HTML só pra ver o comportamento do CSS.
+4- Adicionamos mais uma (no meu caso duas) coluna(s) de 300px. 
+5- Voltamos o justify-content:end para justify-content:center.
+
+PARTE 2
+=======
+6- Colocamos 1fr na ultima coluna da direita para observar o comportamento do layout, que foi: expandiu infinitamente a ultima coluna da direita, ou seja, a parte do elemento já não vai mais ter efeito, pois precisamos de espaço sobrando, então que fique bem claro que: PARA ESTE TIPO DE ELEMENTO TER EFEITO, PRECISAMOS TER ESPAÇO SOBRANDO.
+==========================================================================
+7- Voltamos a quantidade de divs apenas para 4 
+
+8- grid-template-columns: auto auto;
+- essa declaração define que: a largura será automática de acordo com o tamanho do MAIOR CONTEÚDO DENTRO DO ELEMENTO.
+
+9- Mudamos o tamanho do parágrafo (MAIOR CONTEÚDO DENTRO DO ELEMENTO) da segunda e quarta div para menor, para poder exemplificar na tela o comportamento do grid-template-columns: auto auto;
+
+10- Agora temos duas colunas de tamanhos diferentes, pois a segunda coluna "não precisa de tanto espaço", pois o tamanho do texto do parágrafo é menor.
+
+=======================================================================================
+*A unidade de medida fr não funciona o justify-content, pois sempre estará tentando preencher o espaço total da tela, não permitindo nenhum alinhamento. 
+*grid-template-columns:auto auto; permite justify-content :)
+
+JUSTIFY-CONTENT
+===============
+/* justify-content: center - Para distribuir ou alinhar na horizontal, no eixo X (por equanto usaremos como eixo X apenas, mas isso vai mudar).
+
+• justify-content: space-between é um valor que distribui itens uniformemente em uma linha ou coluna, colocando o primeiro item no início, o último no final e espaçamento igual entre os elementos. 
+Imagine que você tem 3 caixas dentro de um contêiner:
+A primeira caixa vai grudar na borda esquerda (início).
+A última caixa vai grudar na borda direita (final).
+O espaço que sobrar no meio será dividido igualmente entre as caixas restantes. 
+Regra de ouro: Não há espaço nas extremidades (bordas externas), apenas entre os itens, porém da pra colocar espaço usando a declaração margin dntro do seletor flex container 
+
+• justify-content:space-around é uma forma de distribuir elementos dentro de um contêiner, colocando espaços iguais ao redor de cada item. 
+Imagine que você tem três caixas em uma linha. O space-around vai garantir que:
+O espaço antes da primeira caixa e depois da última seja de um tamanho "X".
+O espaço entre as caixas seja duas vezes maior ("2X"). 
+
+• justify-content: space-evenly que distribui os itens dentro de um contêiner garantindo que todo o espaço em branco seja exatamente igual.Diferente de outros métodos, ele não privilegia o meio. As bordas (início e fim) terão a mesma distância que o espaço entre os itens. 
+
+
+ALIGN-CONTENT
+=============
+O align-content é a propriedade que define como as linhas inteiras de um contêiner flexível (Flexbox) se alinham entre si, quando há espaço extra no eixo transversal (vertical, por padrão), mas ele só consegue alinhar na vertical, se houver espaço na vertical, por padrão, o tamanho do grid é exatamente onde termina o conteúdo, então ele nao tem espaço sobrando na vertical, por isso não vemos diferença.
+Pense nele como o justify-content, mas aplicado às linhas e não aos itens individuais. 
+
+PARTE 3
+=======
+11- Usamos a propriedade align-content:end, mas nada aconteceu, pois para o a propriedade funcionar devemos ter ESPAÇO SOBRANDO, lembra?
+
+12- Aumentamos o tamanho do class grid para height 800px.
+
+13- justify-content:space-evenly;
+14- align-content: space-evenly;
+15- As propriedades agora funcionam.
+
+16- ATALHO PARA ALIGN-CONTENT E JUSTIFY-CONTENT = PLACE-CONTENT (ORDEM: ALIGN, JUSTIFY)
+ place-content: center space-evenly;
+ place-content: center; (align e justify no centro)
+
+
+LEMBRETE: PARA JUSTIFICAR OU ALINHAR O CONTEÚDO, TEMOS QUE TER ESPAÇO SOBRANDO.
+
+*/

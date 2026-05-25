@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Height and Width</title>
+
+    <style>
+        body {
+            height: 200px;
+
+        }
+
+        .container {
+
+            background-color: green;
+            height: 50%;
+            width: 75%;
+        }
+
+        .children {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+
+
+<!-- HTML -->
+
+<body>
+
+    <div class="container">
+        <div class="children">
+
+        </div>
+    </div>
+
+
+</body>
+</html>
+
+<!-- A diferença principal é bem simples:
+
+px (pixel) = tamanho fixo: 300px sempre será 300px, não importa o tamanho da tela. É como dizer "quero exatamente esse tamanho"
+
+% "tamanho relativo" =  50% significa "metade do tamanho do elemento pai"
+Muda conforme o tamanho da tela ou do container
+É como dizer "quero ESSA proporção, do espaço DISPONÍVEL" -->

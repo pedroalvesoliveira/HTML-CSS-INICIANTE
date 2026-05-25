@@ -1,0 +1,39 @@
+/* h1,
+a {
+  color: red;
+} */
+
+/* html body a {
+  color: black;
+} */
+
+/* .design {
+  color: red;
+} */
+
+#introducao {
+  color: gold;
+}
+
+/* .codigo,
+.design {
+  color: cornflowerblue;
+} */
+/* ASSIM ELE FUNCIONA, POIS TEMOS A VIRGULA ENTRE OS SELETORES, ESPECIFICANDO QUE O ESTILO DESEJADO É EM CADA SELETOR PRESENTE ANDES DE ABRIR O BLOCO DE DECLARAÇÕES */
+
+.codigo .design {
+  color: red;
+}
+
+/* ASSIM NÃO FUNCIONA, POIS ESTÁ DIZENDO QUE: TODO ATRIBUTO DE CLASS="DESIGN" QUE ESTIVER ANINHADO DENTRO DE UM OUTRO ATRIBUTO DE CLASS="CODIGO" DEVE SER PINTADO DE VERMELHO, E NESTE CASO, EM NOSSO DOCUMENTO TEMOS APENAS AS CLASSES SEPARADAS, E NÃO ANINHADAS ENTRE SI. */
+
+.azul,
+.underline,
+.grande {
+  color: blue;
+  text-decoration: underline;
+  font-size: 32px;
+}
+/* body{...} Type Selector
+.box{...} Class Selector
+#lol{...} Id Selector */

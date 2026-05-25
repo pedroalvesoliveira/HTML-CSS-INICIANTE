@@ -1,0 +1,6 @@
+h1 {
+  background-image: linear-gradient(to right, yellowgreen, yellow, orange, red);
+}
+h2 {
+  background-image: linear-gradient(to right, lightgrey, darkgray, black);
+}

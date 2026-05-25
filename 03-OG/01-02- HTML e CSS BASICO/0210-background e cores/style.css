@@ -1,0 +1,34 @@
+h1 {
+  background: #8844ee;
+  color: rgba(0, 0, 0, 0.5);
+  /* color: #8844ee; */
+  /* color: rgba(255, 255, 255, 0.5); */
+}
+.titulo {
+  background-color: #000000;
+  color: #ffffff;
+}
+h2 {
+  color: white;
+}
+.fundo-degrade {
+  background-image: linear-gradient(to right, black, white);
+}
+
+a {
+  background: seagreen;
+  color: white;
+  font-size: 30px;
+}
+
+/*ORDEM
+
+RGB (red, green, blue) -> rgb(255, 0, 23);
+RGBA(red, green, blue, opacidade(que vai de 0 a 1) ->color: rgba(255, 255, 255, 05); 
+
+
+
+
+
+
+*/

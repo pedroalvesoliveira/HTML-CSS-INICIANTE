@@ -1,0 +1,30 @@
+blockquote
+=======================================================
+blockquote marca uma citação extensa e recebe um atributo cite com a fonte. E do lado de fora do elemento blockquote, você coloca em um parágrafo o nome do autor.
+
+q
+=======================================================
+q marca uma citação inline (no texto).
+Eu quero falar que uma parte do texto foi citação de alguém, e essa citação esta dentro de uma frase, então eu uso a tag q para identar que aquilo é uma citação.
+Envolve o conteúdo em áspas.
+
+cite
+=======================================================
+cite é utilizada para citar o nome de um trabalho, livro, filme, peça ou algo parecido. Não é para citar autor, apenas a obra. Ex: nome de um livro, nome de um filme específico, nome de música e qualquer outra coisa que contenha direitos autorais que não sejam seus.
+
+Ele deixa o nome em questão em itálico, mas não é pra usar o elemento cite apenas para deixar o texto em itálico, e sim pela semântica. 
+
+em
+=======================================================
+em é a tag semântica é utilizada para dar enfase em uma frase/palavra no texto.
+
+Em termos de estilo, ele vai aplicar somente um efeito itálico, porém lembre-se: estamos falando de uma tag semântica, portanto, use o elemento <em>
+quando for dar enfase em algo.
+
+strong
+=======================================================
+strong é utilizada para marcar uma parte importante do conteúdo.
+Funciona basicamente como a tag <em>, porém, dizem que é usada quando se quer dar uma ênfase um pouco maior.
+
+Em termos visuais ela vai aplicar o negrito.
+

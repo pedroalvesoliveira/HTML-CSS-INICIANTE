@@ -1,0 +1,62 @@
+=====================
+PROPRIEDADE: POSITION 
+=====================
+Define como um elemento é posicionado no layout: (estático, relativo, absoluto, fixo ou colado), ALTERANDO SEU COMPORTAMENTO no fluxo da página. 
+
+Permite mover elementos para posições específicas usando top, bottom, left e right, sendo fundamental para layouts complexos e componentes flutuantes.
+
+VALORES PRINCIPAIS
+==================
+
+*fixed: Fixa o elemento na tela. O elemento é removido do fluxo e posicionado em relação à janela do navegador (viewport), permanecendo fixo mesmo durante a rolagem.
+
+*relative: Mantém o elemento no fluxo padrão, mas permite modificarmos os valores de top, right, bottom e left do mesmo. O espaço ocupado pelo elemento continuará a ser ocupado, mesmo que o elemento seja movimentado.
+O elemento é posicionado em relação à sua posição original, sem afetar o layout dos elementos vizinhos.
+
+
+*absolute: Ótimo para quando você quer posicionar a mensagem acima da borda de alguma div por exemplo, caso usasse outro tipo de posicionamento, teria que colocar margem negativa e vários outros ajuster para chegar no mesmo resultado.
+
+O elemento é removido do fluxo normal e posicionado em relação a tela, e não mais ao elemento pai (div) a qual ele pertence. 
+Posicionamento como top, bottom, left right passam a se comportar de maneira diferente (vão funcionar em "relação ao elemento ancestral", ou seja, TODO O CONTEÚDO, ou seja, A TELA kkk) 
+Para poder posicionar ele em relação ao elemento pai que envolve ele, você coloca o elemento "pai do pai dele" como position:relative, ai sim você pode chamar o position absolute no seletor.
+
+
+*static (Padrão): O elemento segue o fluxo normal do documento. As propriedades de posicionamento (top, left, etc.) não funcionam.
+
+*sticky: Funciona como relative até atingir um ponto de rolagem definido, tornando-se fixed a partir dali. 
+
+=======================
+PROPRIEDADES AUXILIARES
+=======================
+Definem o posicionamento dos elementos que não estão no fluxo padrão.
+
+top
+bottom
+left
+right
+
+Essas propriedades determinam o deslocamento em relação ao contêiner (pai posicionado ou a janela/viewport).
+
+Z-INDEX
+=======
+Define a posição no eixo z (profundidade) dos elementos que foram posicionados fora do fluxo (relative, fixed, absolute).
+=======
+
+Estrutura apagada position:fixed
+=========================
+  <h1>Primeiro conteúdo</h1>
+  <h1>Segundo conteúdo</h1>
+  <h1>Terceiro conteúdo</h1>
+  <h1>Quarto conteúdo</h1>
+  <h1>Quinto conteúdo</h1>
+
+  <div class="fixo">
+  <p>Neste site usamos Cookies.</p>
+</div>
+
+.fixo{
+  position:fixed;
+  right: 20px;
+  left: 20px;
+  bottom: 20px;
+}

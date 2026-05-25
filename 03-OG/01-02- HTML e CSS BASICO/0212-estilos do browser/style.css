@@ -1,0 +1,16 @@
+body {
+  color: seagreen;
+}
+
+a {
+  color: inherit;
+}
+
+/* h1,
+h2,
+p {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
+} */
+/*Um reset comum de fazer manualmente em alguns elementos HTML*/

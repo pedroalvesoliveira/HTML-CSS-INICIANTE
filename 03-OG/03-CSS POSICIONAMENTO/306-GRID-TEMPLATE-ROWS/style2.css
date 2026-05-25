@@ -1,0 +1,77 @@
+/* AULA 1-  Estilos Gerais ↓ */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 40px;
+}
+h1,
+p {
+  margin: 0;
+}
+h1 {
+  font-size: 48px;
+  line-height: 1;
+  /* line-height:1 - diminui o espaçamento entre as linhas, caso a palavra Stark fique embaixo do h1*/
+}
+p,
+span {
+  font-size: 20px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.comprar {
+  background: #a8f;
+  padding: 10px 20px;
+  color: #103;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+.preco {
+  background: #e9d8d8;
+  padding: 5px 10px;
+  border-radius: 4px;
+  /* grid-row: 3; */
+  /* grid-colum:3; */
+  /* grid-area: 2 / 2; */
+}
+
+/* INCIO DA AULA 306 */
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-rows: repeat(3 / auto) 1fr;
+  place-items: start; */
+  /* grid-template-rows: auto auto; */
+  /* grid-auto-rows: repeat(4, 200px); */
+  /* align-items: center; */
+  /* place-items: start end;  align / justify  */
+}
+.titulo {
+  grid-column: 1 / -1;
+}
+.info {
+  display: grid;
+  place-self: start;
+  place-items: start;
+  gap: 20px;
+}
+
+/* Poderiamos ter evitado todo o trabalho do posicionamento em CSS caso apenas fizessemos uma alteração na estrutura HTML.
+- Poderiam ser apenas duas colunas, uma para o título pegando de ponta a ponta + a imagem embaixo dele, e outra coluna pegando preço, descrição e botão de comprar.
+COMO FAREMOS ISSO?
+
+1- colocamos h1 e img um um embaixo do outro respectivamente, e o resto dos itens, inserimos em outra div class="info"
+
+
+
+
+
+
+*/

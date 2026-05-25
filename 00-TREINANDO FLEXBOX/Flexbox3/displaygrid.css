@@ -1,0 +1,43 @@
+.container{
+    background-color: aqua;
+    display:grid;
+    /* grid-template-columns: 200px 200px; */
+grid-template-columns: 1fr 1fr;
+    gap: 20px;
+/* justify-content: center; */
+/* align-items: left; */
+}
+
+.itens{   
+ background-color: gray;
+}
+
+/* DISPLAY:GRID 
+------------------------------------------------------------------------------
+GRID-TEMPLATE-COLUMNS
+Ao colocar o display grid, você vai reparar que de início não acontece nada. O comportamento dos itens ainda é o padrão.
+Isso muda quando colocamos a propriedade grid-template-columns, que funciona da seguinte forma: 
+
+- Eu tenho 6 itens dentro do elemento pai, e suponhamos que eu queira que tenha 3 itens encima e 3 itens embaixo, podemos adicionar o valor de 100px 3x seguidas para alterar a largura das colunas, isso aqui é tipo um mapa, onde cada valor que você colocar aqui vai ser igual um item. Se eu quiser 2 itens em cada linha, basta colocar por exemplo 200px 200px(2x).    
+Ao colocar o valor auto auto auto (3x), os valores vão ser iguais para todos os itens.
+
+UM VALOR CHAMADO FR
+------------------------------------------------------------------------------
+Se você colocar 1fr (2x), significa que você vai ter dois itens por linha, só que do mesmo tamanho.
+Se você colocar 2fr 1fr, significa que o primeiro item por linha, vai ter o dobro do tamanho do segundo.
+Se colocar 3fr 1fr, primeiro item por linha terá 3x o tamanho do seguindo item.
+Também funciona ao contrário.
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/

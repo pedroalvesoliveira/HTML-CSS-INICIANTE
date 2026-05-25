@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Selector</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        ul,
+        ol {
+            background-color: aquamarine;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Isso é um título h1</h1>
+    <h2>Isso é um título h2</h2>
+    <h3>Isso é um título h3</h3>
+    <h4>Isso é um título h4</h4>
+    <h5>Isso é um título h5</h5>
+    <h6>Isso é um título h6</h6>
+    <p>Isso é um parágrafo</p>
+    <p>Isso é um parágrafo</p>
+    <p>Isso é um parágrafo</p>
+
+    <ul>
+        <li>test1</li>
+        <li>test2</li>
+        <li>test3</li>
+    </ul>
+
+    <ol>
+        <li>test1</li>
+        <li>test2</li>
+        <li>test3</li>
+    </ol>
+
+
+</body>
+</html>
+
+<!-- SELETOR UNIVERSAL
+============================================================================
+Como o nome sugere, seleciona todos os elementos de dentro do documento.
+
+Criamos um documento HTML com elementos h1 até h6, alguns parágrafos, uma ul e uma ol cada uma com 3 itens (li), colocamos a mesma cor em todos os elementos da página através do style.
+
+*Podemos reparar que mesmo sem específicar alguma margin, padding ou qualquer outro tipo de espaçamento, o documento tem um gap automático entre os elementos.
+*PORQUE ISSO ACONTECE?
+No devtools podemos inspecionar elemento por elemento no HTML e ver que em CSS eles ja possuem alguns valores que estarão lá por padrão, mesmo que a gente nao defina nada.
+*Neste caso, usaremos o universal selector para substituir todos os valores padrões. Neste caso, eu quero remover todas as margens e paddings deste website, então eu uso o asterisco * seguido de um bloco de declaração *{}. Desta forma todas as margins e paddings se foram do website.
+
+*NO INÍCIO DE CADA PROJETO, É CONSIDERADA UMA BOA PRÁTICA, REMOVER TODAS AS MARGENS E PADDINGS QUE ESTÃO LÁ POR PADRÃO. ISSO NOS DÁ UM PONTO DE PARTIDA MAIS LIMPO, PODENDO DEFINIR POR NÓS MESMOS OS VALORES DE MARGIN E PADDING QUE DESEJAMOS PARA CADA ELEMENTO, E DESTA FORMA NÃO VEREMOS NENHUM COMPORTAMENTO ESTRANHO EM RELAÇÃO A RESPONSIVIDADE DOS ELEMENTOS.
+
+-->

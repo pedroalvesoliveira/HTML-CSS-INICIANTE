@@ -1,0 +1,141 @@
+body {
+  margin-bottom: 500px;
+}
+
+.flexbox {
+  height: 500px;
+  border: 3px solid red;
+  display: flex;
+  margin-bottom: 16px;
+  justify-content: center;
+  /* align-items: stretch; */
+  align-content: space-evenly;
+  flex-wrap: wrap;
+
+  flex-direction: column;
+}
+
+.flexbox div {
+  border: 2px solid orange;
+  width: 200px;
+  height: 200px;
+  flex-basis: 150px;
+  margin: 15px;
+}
+
+/* As divs que estão dentro do flexbox possuem uma borda, uma largura e uma margem
+
+ESSE É O COMPORTAMENTO DO DISPLAY FLEX POR PADRÃO
+
+Ao adicionar-mos o display:flex dentro da div pai, a declaração vai automáticamente transformar o container (que por padrão vem uma div embaixo da outra), em um Flex Container, e a partir dai ele vai alinhar e distribuir os seus filhos diretos (as 4 divs numeradas de 1 até 4).
+
+Ao adicionarmos essa declaração de display flex, o container passa a ser chamado de flex container e as divs passam a ser chamadas de FLEX ITEMS.
+
+O padrão do display:flex é deixar alinhado os flex itens, mesmo que nao caibam na janela, ela vai se adaptando, porém, ele respeita as especificações que foram feitas em flexbox.div, mantendo as características intáctas, achatando o conteúdo para que ele caiba no flex conteiner.
+Ao esticar a tela para o lado, aumentando ela de tamanho, percebemos que ele trava os cards (flex itens) em 150px, respeitando também o valor que foi colocado na declaração flexbox.div, (e assim fazendo sobrar um espaço enorme em branco dentro do container).
+
+Resumidamente: ele alinha na horizontal e estica na vertical.
+*/
+
+/* A PARTIR DAI, A MANEIRA QUE QUISERMOS ALINHAR OS FLEX ITENS, DEVE SER AJUSTADO NO SELETOR DO ELEMENTO PAI, E NÃO NO SELETOR DOS FLEX ITENS
+ ----------------------------------------------------------------------------
+/* justify-content: center - Para distribuir ou alinhar na horizontal, no eixo X (por equanto usaremos como eixo X apenas, mas isso vai mudar).
+
+• justify-content: space-between é um valor que distribui itens uniformemente em uma linha ou coluna, colocando o primeiro item no início, o último no final e espaçamento igual entre os elementos. 
+Imagine que você tem 3 caixas dentro de um contêiner:
+A primeira caixa vai grudar na borda esquerda (início).
+A última caixa vai grudar na borda direita (final).
+O espaço que sobrar no meio será dividido igualmente entre as caixas restantes. 
+Regra de ouro: Não há espaço nas extremidades (bordas externas), apenas entre os itens, porém da pra colocar espaço usando a declaração margin dntro do seletor flex container 
+
+• justify-content:space-around é uma forma de distribuir elementos dentro de um contêiner, colocando espaços iguais ao redor de cada item. 
+Imagine que você tem três caixas em uma linha. O space-around vai garantir que:
+O espaço antes da primeira caixa e depois da última seja de um tamanho "X".
+O espaço entre as caixas seja duas vezes maior ("2X"). 
+
+• justify-content: space-evenly que distribui os itens dentro de um contêiner garantindo que todo o espaço em branco seja exatamente igual.Diferente de outros métodos, ele não privilegia o meio. As bordas (início e fim) terão a mesma distância que o espaço entre os itens. 
+
+ALIGN ITENS
+--------------------------------------------------------------------------------------------------
+Pense no align-items como a forma de decidir se seus elementos "filhos" vão ficar no topo, no meio ou na base de um contêiner, quando ele usa display: flex.
+
+Onde aplicar: No contêiner pai (display: flex).
+
+• align-items:stretch é a definição padrão ("default") que faz com que os elementos filhos (itens) se estiquem para preencher todo o tamanho do contêiner pai no eixo transversal. 
+Se o contêiner flex tem uma altura de 300px, e você não definiu altura nos itens filhos, o stretch faz com que todos eles fiquem com 300px de altura automaticamente. 
+Pense assim: É como "esticar" uma goma de mascar para ela ocupar todo o espaço vertical disponível. 
+
+• align-items: center no CSS é a forma mais fácil de alinhar elementos verticalmente no centro dentro de um contêiner (como uma div ou header), desde que você esteja usando Flexbox (display: flex). 
+
+• align-items:center diz: "Peguem todos os itens filhos e coloquem-nos exatamente no meio do contêiner, na vertical". 
+
+• align-items: flex-start no CSS Flexbox é a forma mais simples de dizer: "cole todos os itens no início (topo) do contêiner". 
+Aqui está a explicação simplificada e visual:
+Imagine que o seu contêiner é uma caixa e os elementos dentro dela (filhos) são objetos.
+Comportamento: align-items: flex-start; alinha os itens no início do eixo perpendicular (vertical por padrão).
+Resultado: Os itens se alinham ao topo, ignorando o tamanho do maior item e usando apenas a altura necessária para seu próprio conteúdo. 
+
+• align-items:flex-end; serve para empurrar todos os itens dentro de um contêiner para o final do eixo transversal (vertical, por padrão). 
+Se a caixa é alta, o flex-end faz com que os blocos fiquem todos encostados na borda inferior, alinhados pela base. 
+O que faz: Alinha os filhos na parte inferior do contêiner.
+Quando usar: Quando você tem itens de alturas diferentes, ou quer "jogar" os itens para baixo sem usar posicionamento absoluto.
+Eixo Principal: Por padrão (row), ele alinha verticalmente. Se usar flex-direction: column, ele alinha horizontalmente à direita. 
+
+------------------------------------------------------------------------------
+
+FLEX-WRAP
+
+• flex-wrap: propriedade que define se os itens dentro de um contêiner flexível devem se espremer em uma única linha ou quebrar para novas linhas (criar uma nova linha) caso não haja espaço suficiente.
+
+Pense nele como o "quebra de linha" do Flexbox. Sem ele, os itens tentam 
+ficar lado a lado para sempre, mesmo que estourem o tamanho da tela. 
+
+Por que aprender?
+O comportamento padrão (nowrap) faz com que os itens diminuam de tamanho ou saiam da tela. O flex-wrap: wrap; é fundamental para criar layouts responsivos que se adaptam a celulares, tablets e desktop. 
+
+Os Principais Valores
+
+• flex-wrap: nowrap; (Padrão)
+O que faz: Todos os itens ficam em uma linha só. Se não couber, eles diminuem ou transbordam.
+• flex-wrap: wrap;
+O que faz: Quebra os itens para a linha de baixo se não houver espaço horizontal.
+• flex-wrap: wrap-reverse;
+O que faz: Quebra os itens para baixo, mas inverte a ordem das linhas. 
+------------------------------------------------------------------------------
+ALIGN-CONTENT
+------------------------------------------------------------------------------
+O align-content é a propriedade que define como as linhas inteiras de um contêiner flexível (Flexbox) se alinham entre si, quando há espaço extra no eixo transversal (vertical, por padrão), mas ele só consegue alinhar na vertical, se houver espaço na vertical, por padrão, o tamanho do grid é exatamente onde termina o conteúdo, então ele nao tem espaço sobrando na vertical, por isso não vemos diferença 
+Pense nele como o justify-content, mas aplicado às linhas e não aos itens individuais. 
+
+"O Organizador de Linhas"
+O que ele faz: Ele gerencia o espaço entre as linhas de itens flexíveis quando você tem flex-wrap: wrap (itens quebrados em várias linhas).
+
+Quando usar: Apenas quando houver mais de uma linha de conteúdo.
+Eixo de atuação: Eixo transversal (vertical se flex-direction: row). 
+
+------------------------------------------------------------------------------
+FLEX-DIRECTION
+
+• flex-direction do CSS define para onde os itens dentro de um contêiner (pai) vão apontar. 
+Ela define o "eixo principal" do layout, ou seja, se os elementos devem ficar alinhados horizontalmente (como uma linha) ou verticalmente (como uma coluna).
+
+Ela é aplicada no elemento pai que possui display: flex. 
+
+Os 4 Valores Principais: 
+
+•row (Padrão): Alinha os itens horizontalmente, da esquerda para a direita (->).
+
+•column: Alinha os itens verticalmente, de cima para baixo. 
+
+•row-reverse: Alinha horizontalmente, mas da direita para a esquerda, invertendo a ordem. 
+
+•column-reverse: Alinha verticalmente, mas de baixo para cima, invertendo a ordem.
+
+
+
+
+
+
+
+
+*/

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Box Model 2 (DIV)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div>pedrones</div>
+
+  <h1>Front End</h1>
+
+</body>
+
+</html>
+
+<!-- - PORQUE O ELEMENTO AUMENTA DE TAMANHO?
+===========================================================
+Chamamos isso de box-model. 
+O CSS box model é literalmente uma caixa que envolve todos os elementos HTML. É composta de content, padding, boders e margins.
+
+CALCULANDO A WIDTH E HEIGHT INTEIRA DE UM ELEMENTO.
+==========================================================
+Para calcular a altura e largura inteira do elemento, você precisa incluir o padding e as bordas.
+EX: Para calcular a largura inteira deste elemento, nós usamos a seguinte ordem:
+1 - 300px da aréa do conteúdo
+2 - 120px padding left
+3 - 90px padding right
+
+300px+120px+90px = width=510px;
+
+Ex: Para calcular a altura inteira do elemento, usaremos a seguinte ordem:
+1 -50px da área do conteúdo 
+2 -100px padding top
+3 -50px padding bottom
+
+50px+100px+50px= height=200px
+
+O QUE ACONTECERIA SE EU ADICIONASSE UMA BORDA?
+Neste caso o elemento ficaria ainda maior, somando assim o dobro do valor da borda tanto no height=220px e width=530px.
+ESSE É UM FUNDAMENTO IMPORTANTÍSSIMO DO CSS. PRESTE MUITA ATENÇÃO NELE!
+
+- Cada elemento na página tem um retângulo invisível em volta de si. Isso é chamado de box model. Você pode pensar na box-model como um "hitbox" de um char de videogame. Cada elemento na página tem uma "hitbox" que define quanto espaço o elemento ocupa na página.  -->
+
+<!-- PADDING
+=========================================================================== 
+- É o espaço entre a borda de um elemento para o seu conteúdo. Ao adicionarmos padding em um elemento, é como "empurrar o conteúdo para dentro".
+- Iniciamos com:
+
+<div class="box">This is a box with padding</div>
+
+.box{
+    background-color: chartreuse;
+    height: 50px;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    padding-top:100px;
+    }
+- A ÚNICA DIFERENÇA É QUE O PADDING OCORRE DENTRO DO ELEMENTO ENQUANTO A MARGEM FUNCIONA DO LADO DE FORA DO ELEMENTO.
+
+- Podemos reparar que sem o padding o texto fica colado na borda superior esquerdo da caixa, por padrão.
+
+- Ao adicionarmos o padding:20px, imediatamente reparamos em duas coisas: A DIV FICOU MAIOR E O TEXTO FOI EMPURRADO PARA DENTRO DA CAIXA. Isso acontece porque ao setarmos esse valor, estaremos aplicando o padding a todos os lados do elemento da mesma maneira que a margin faz.
+
+- Também podemos colocar um padding de um lado específico, por exemplo padding-top:100px;. Agora temos um gap interior enorme de 20px no topo da tela, empurrando nosso texto para baixo. 
+
+-Também podemos definir paddings adicionais para cada direção, assim como fizemos com a margin.
+
+============================================================================
+- IMPORTANTÍSSIMO
+============================================================================
+- Como você pode reparar, o conteúdo continua sendo empurrado para dentro através dos paddings diferentes que foram estabelecidos. 
+Para manter a distancia do conteúdo, o elemento não tem outra escolha a não ser aumentar de tamanho toda vez, mesmo que já tenhamos setado um height:50px; e width:300px;  
+
+ MARGIN
+ =================================================
+- É o espaço de fora da borda de um elemento. Ela separa o elemento de seu elemento vizinho, criando um espaço em volta deles.  
+ 
+- Primeiramente colocamos em 3 divs da classe box: 
+ .box{
+    background-color: lightgreen;
+    height: 50px;
+    margin: 20px;
+}
+ /* SHORTHANDS
+    margin: 20px (top) 10px (right) 15px(bottom) 5px (left) 
+    margin: 20px (top/bottom) 10px (right/left) */
+       
+
+- De primeira não conseguimos vizualizar nada, pois as 3 divs estavam sem espaço entre elas. Ao adicionarmos a margem de 20px elas se separaram, ficando clara a localização das três.
+
+IMPORTANTE
+
+Ao retirarmos a margin do código, os elementos irão grudar um no outro novamente, porém, podemos reparar que eles ainda ficam com um espaço entre as divs e as bordas.
+Isso acontece porque o CSS tem como padrão o valor 8px, e devemos nos manter atentos a isso. Para removermos a margin:8px que o CSS coloca como padrão, basta colocarmos dentro do seletor body o atributo margin com o valor de 0, lembrando que quando um valor de um atributo for 0, não precisamos especificar o tipo de unidade.
+
+A PROPRIEDADE BOX-SIZING
+============================================================================Define como a altura e largura total de um elemento será calculada.
+Por padrão, o width e height de um elemento é calculado assim:
+width + padding + border = actual width
+height + padding + border = actual height
+
+PORÉM quando nós definimos o atributo box-sizing:border-box, isso será calculado diferente.
+A border e o padding estarão inclusos no height e width do elemento. Isso torna o elemento mais previsível, pois o tamanho continuará consistente. 
+Se aplicarmos um padding no elemento, nós poderemos ver como o tamanho do elemento muda. A mesma coisa acontece caso adicionemos uma borda no elemento div, e isso pode causar problemas, pois os elementos estão maiores que o esperado.
+
+Agora veremos como o box-sizing muda a maneira que o navegador calcula o tamanho total do elemento.
+
+*.contentBox é o valor padrão na maioria dos elementos, então os elementos vão aumentar de tamanho caso apliquemos um padding ou border. Aqui a width e height é aplicado somente ao conteúdo do elemento, e é por isso que o padding e border vão aumentar o valor total do elemento, pois o border e padding é aplicado em volta do elemento.
+
+*.borderBox: ao setarmos o a propriedade border-box dentro do elemento box sizing, a width e height irão incluir o conteudo do padding e border, portanto, o tamanho total do elemento permanecerá o mesmo. Ao usar border-box, as borders e os paddings serão aplicados do lado de dentro.
+
+*!Border box nos ajuda a evitar mudanças de tamanho inesperadas, e facilita fazer o design de layouts responsivos.
+-->

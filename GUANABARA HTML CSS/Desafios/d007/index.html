@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D007</title>
+</head>
+
+<body>
+  <h1>Imagem Flexível</h1>
+
+  <p>Você está vendo a imagem completa? Experimente ampliar o tamanho da janela do navegador.para ampliar sua experiência.</p>
+
+  <p>A tag <strong>&lt;picture&gt;</strong> é um contêiner inteligente usado para exibir imagens responsivas.</p>
+  <p>Ela permite oferecer diferentes versões de uma mesma imagem (tamanhos ou formatos) para que o navegador escolha a melhor opção baseada na tela do usuário, melhorando o desempenho e a qualidade visual em celulares ou desktops.</p>
+
+  <!-- <picture>: Contêiner principal para imagens responsivas, permite definir múltiplas fontes de imagem baseadas em condições -->
+  <picture>
+    <!-- <source>: Define uma fonte alternativa de imagem; media="(max-width: 750px)" aplica quando a tela é menor ou igual a 750 px, usando a imagem pequena para economizar espaço -->
+    <source media="(max-width: 750px )" srcset="img/paisagem-p.png">
+
+    <!-- <source>: Outra fonte alternativa; media="(max-width: 1400px)" aplica quando a tela é menor ou igual a 1400px, usando a imagem média para telas maiores -->
+    <source media="(max-width: 1400px )" srcset="img/paisagem-m.png">
+
+    <!-- <img>: Tag de imagem padrão usada como fallback; exibe a imagem grande se nenhuma condição de <source> for atendida, ou se o navegador não suportar <picture> -->
+    <img src="img/paisagem-g.png" alt="Paisagem">
+
+  </picture>
+
+
+</body>
+
+</html>

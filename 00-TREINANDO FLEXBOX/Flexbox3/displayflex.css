@@ -1,0 +1,48 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content:center ;
+    width: 100%;
+    height: 100px;
+    background-color: red;
+    gap: 60px;
+    align-items:center ;/* tipo o justify content, só que ajusta os valores verticalmente */
+    
+}
+/*-----------------------------------------------------------------------------
+DISPLAY FLEX
+------------------------------------------------------------------------------
+Para o display flex funcionar, você tem que colocar essa propriedade em um 
+elemento pai, isso vai mudar o direcionamento do conteúdo dele, e ja conseguirá ver que os conteúdos dentro do elemento pai ficaram dentro de uma só linha.
+
+------------------------------------------------------------------------------
+FLEX-DIRECTION
+------------------------------------------------------------------------------
+Você pode alterar o direcionamento do conteúdo do elemento pai usando essa 
+declaração dentro dele. Um dos valores é o colum, que faz com que o conteúdo volte a posição original, ja o valor row, fará com que o conteúdo fique em uma mesma linha (posição padrão do dislay flex).
+
+------------------------------------------------------------------------------
+JUSTIFY-CONTENT
+------------------------------------------------------------------------------
+Faz com que a posição dos conteúdos mudem.
+A declaração center, faz com que os conteúdos fiquem alinhados horizontalmente.
+
+O space-around, faz com que os conteúdos tenham um espaço entre sí, e metade desse espaço em cada borda (esquerda direita).
+
+o space-between, faz com que seja colocado espaço ENTRE os elementos filhos, colando os conteúdos externos nas bordas e alinhando o espaço por igual entre eles.
+
+------------------------------------------------------------------------------
+GAP
+------------------------------------------------------------------------------
+É mais uma propriedade que se abre ao usar display flex dentro do elemento pai.
+Gap coloca espaço entre os conteúdos dentro do elemento pai.
+
+
+
+TODAS ESSAS PROPRIEDADES SÓ ALTERAM SEUS ESPAÇAMENTOS DE ACORDO COM A LARGURA DO ELEMENTO PAI.
+
+
+
+
+
+*/

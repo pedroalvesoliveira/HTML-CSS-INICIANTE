@@ -1,0 +1,95 @@
+/* AULA 1-  Estilos Gerais ↓ */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 40px;
+}
+h1,
+p {
+  margin: 0;
+}
+h1 {
+  font-size: 48px;
+  line-height: 1;
+  /* line-height:1 - diminui o espaçamento entre as linhas, caso a palavra Stark fique embaixo do h1*/
+}
+p,
+span {
+  font-size: 20px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.comprar {
+  background: #a8f;
+  padding: 10px 20px;
+  color: #103;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+.preco {
+  background: #e9d8d8;
+  padding: 5px 10px;
+  border-radius: 4px;
+  /* grid-row: 3; */
+  /* grid-colum:3; */
+  /* grid-area: 2 / 2; */
+}
+
+/* INCIO DA AULA 306 */
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3 / auto) 1fr;
+  place-items: start;
+  /* grid-template-rows: auto auto; */
+  /* grid-auto-rows: repeat(4, 200px); */
+  /* align-items: center; */
+  /* place-items: start end;  align / justify  */
+}
+.titulo {
+  grid-column: 1 / -1;
+}
+.foto {
+  grid-column: 1;
+  grid-row: 2 / 5;
+}
+
+/*GRID-TEMPLATE-ROWS
+Até agora, só manipulamos colunas e as nossas linhas estão sendo definidas automáticamente, quanto mais conteúdo temos, mais linhas eram criadas, porém, podemos definir exatamente a quantidade de linhas que vamos ter, e os tamanhos exatos delas, e também vamos poder posicionar o item exatamente na linha que quisermos.
+Temos que lembrar que ele sempre vai forçar a criação de novas linhas, se ele não tiver espaço para o conteúdo ele vai criar linha nova, diferente do grid-template-colum que NÃO FORÇA a criação de colunas novas.
+Por padrão TODA LINHA NOVA que é criada é com valor de grid-template-rows:auto;
+
+grid-template-rows: 100px auto;
+ Define o tamanho das linhas.
+
+grid-auto-rows:
+ Linhas são adicionadas automaticamente com o valor de auto.
+
+grid-row: 2
+ Define a linha do item, funciona da mesma forma que o grid-column.
+
+ grid-area
+  Utilizada para definir o tamanho e a localização de um item dentro de uma grade (grid container).Ela atua como um shorthand para definir as linhas de início e fim, tanto para colunas quanto para linhas, em uma única declaração. 
+  A sintaxe abreviada segue a ordem: linha inicial / coluna inicial / linha final / coluna final.
+ 
+  .exemplo {
+  grid-area: linha-inicio / coluna-inicio / linha-fim / coluna-fim;
+}
+
+INÍCIO DA AULA 306
+==================
+
+1- apagamos toda estilização feita nas classes e deixamos só o grid
+2- colocamos o valor da primeira coluna o dobro da segunda coluna grid-template-columns: 2fr 1fr;
+3-adicionamos um grid-template-rows:
+
+
+
+*/
