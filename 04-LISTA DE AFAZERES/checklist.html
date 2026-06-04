@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist de Afazeres</title>
+    <link rel="stylesheet" href="checklist.css">
+</head>
+
+<body>
+    <!-- CABEÇALHO DA PÁGINA / MAIN -->
+    <main class="page">
+        <section class="card">
+            <header class="card-header">
+                <h1>Checklist de Afazeres do Pedrão</h1>
+                <p>Marque o que você conseguiu realizar hoje.</p>
+            </header>
+
+            <!-- DATA -->
+            <div class="day-control">
+                <div class="day-input">
+                    <label for="dayDate">Dia</label>
+                    <input type="date" id="dayDate">
+                </div>
+
+                <!-- DIAS SALVOS -->
+                <div class="day-counter">
+                    <span>Dias salvos: <strong id="savedDaysCount">0</strong></span>
+                </div>
+            </div>
+
+            <!-- TAREFAS REALIZADAS -->
+            <div class="summary" id="summary">
+                <span>Tarefas realizadas: <strong id="completedCount">0</strong></span>
+                <span>Total de tarefas: <strong>5</strong></span>
+            </div>
+
+            <!-- LISTA DE TAREFAS / TO DO LIST -->
+            <ul class="checklist" id="todoList">
+                <li>
+                    <label>
+                        <input type="checkbox" value="tomar remedios">
+                        <span>Tomar remédios</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" value="comer alguma coisa">
+                        <span>Comer alguma coisa</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" value="academia">
+                        <span>Academia</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" value="baixo">
+                        <span>Baixo</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" value="programacao">
+                        <span>Programação</span>
+                    </label>
+                </li>
+            </ul>
+
+            <!-- BOTÕES DO RODAPÉ / FOOTER ACTIONS -->
+            <div class="footer-actions">
+                <button type="button" id="resetButton">Limpar tudo</button>
+                <button type="button" id="submitButton">Enviar</button>
+            </div>
+
+            <!-- HISTÓRICO / HISTORY CARD -->
+            <section class="history-card">
+                <header>
+                    <h2>Registros salvos</h2>
+                    <p id="historyMessage">Os dados de cada dia serão salvos aqui.</p>
+                </header>
+                <ul class="history-list" id="historyList"></ul>
+            </section>
+        </section>
+    </main>
+    <script src="checklist.js"></script>
+</body>
+
+</html>

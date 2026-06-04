@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url(img/pragmata2jpg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: #f5f5f5;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.page {
+  width: min(540px, 100%);
+}
+
+.card {
+  background-image: url(img/fundo\ caixa.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  border: 2.5px solid rgba(255, 255, 255, 0.16);
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  /* box shadow: 0 20px 50px - 
+  0 = deslocamento horizontal
+  20px = deslocamento vertical
+  50px = raio de desfoque (blur) */
+  padding: 32px;
+  backdrop-filter: blur(12px);
+}
+
+.card-header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.card-header p {
+  color: #d8e1ff;
+  line-height: 1.5;
+}
+
+.day-control {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 18px 0 8px;
+}
+
+.day-input {
+  display: grid;
+  gap: 8px;
+  width: min(240px, 100%);
+}
+
+.day-input label {
+  font-weight: 700;
+  color: #f5f5f5;
+}
+
+.day-input input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.07);
+  color: #f5f5f5;
+}
+
+.day-counter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 180px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.day-counter strong {
+  color: #ffeb3b;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 24px 0;
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+}
+
+.summary strong {
+  color: #ffeb3b;
+}
+
+.checklist {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.history-card {
+  margin-top: 24px;
+  padding: 18px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2.5px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.history-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.history-card h2 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.history-card p {
+  color: #d8e1ff;
+  margin-bottom: 16px;
+}
+
+.history-list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.history-item {
+  display: grid;
+  gap: 6px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.history-item span {
+  font-size: 0.95rem;
+}
+
+.footer-actions {
+  margin-top: 24px;
+  text-align: right;
+}
+
+.checklist li {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+
+.checklist label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+}
+
+.checklist input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #ffeb3b;
+}
+
+.checklist span {
+  font-size: 1rem;
+}
+
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 20px;
+  background: #ffeb3b;
+  color: #182848;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
