@@ -10,6 +10,7 @@ const STORAGE_KEY = 'checklistDailyRecords';
 const totalTasks = 5;
 
 function updateSummary() {
+    if (!todoList || !completedCount) return;
     const checkboxes = todoList.querySelectorAll('input[type="checkbox"]');
     const completed = Array.from(checkboxes).filter(input => input.checked).length;
     completedCount.textContent = completed;
@@ -31,16 +32,23 @@ function formatDate(value) {
 }
 
 function updateHistory() {
+    if (!historyList) return;
     const records = loadRecords();
-    savedDaysCount.textContent = records.length;
+    if (savedDaysCount) {
+        savedDaysCount.textContent = records.length;
+    }
     historyList.innerHTML = '';
 
     if (records.length === 0) {
-        historyMessage.textContent = 'Os dados de cada dia serão salvos aqui.';
+        if (historyMessage) {
+            historyMessage.textContent = 'Os dados de cada dia serão salvos aqui.';
+        }
         return;
     }
 
-    historyMessage.textContent = 'Toque em Enviar para salvar o resumo do dia atual.';
+    if (historyMessage) {
+        historyMessage.textContent = 'Toque em Enviar para salvar o resumo do dia atual.';
+    }
 
     records.slice().reverse().forEach(record => {
         const item = document.createElement('li');
@@ -85,29 +93,36 @@ function saveTodayRecord() {
     updateHistory();
 }
 
-todoList.addEventListener('change', event => {
-    if (event.target.matches('input[type="checkbox"]')) {
+if (todoList) {
+    todoList.addEventListener('change', event => {
+        if (event.target.matches('input[type="checkbox"]')) {
+            updateSummary();
+        }
+    });
+}
+
+if (resetButton) {
+    resetButton.addEventListener('click', () => {
+        if (!todoList) return;
+        const checkboxes = todoList.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(input => input.checked = false);
         updateSummary();
-    }
-});
+    });
+}
 
-resetButton.addEventListener('click', () => {
-    const checkboxes = todoList.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(input => input.checked = false);
-    updateSummary();
-});
-
-submitButton.addEventListener('click', () => {
-    if (!dayDate.value) {
-        dayDate.value = new Date().toISOString().slice(0, 10);
-    }
-    saveTodayRecord();
-});
+if (submitButton) {
+    submitButton.addEventListener('click', () => {
+        if (dayDate && !dayDate.value) {
+            dayDate.value = new Date().toISOString().slice(0, 10);
+        }
+        saveTodayRecord();
+    });
+}
 
 (function init() {
     updateSummary();
     updateHistory();
-    if (!dayDate.value) {
+    if (dayDate && !dayDate.value) {
         dayDate.value = new Date().toISOString().slice(0, 10);
     }
 })();

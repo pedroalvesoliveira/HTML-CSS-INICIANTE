@@ -6,8 +6,9 @@
 }
 
 body {
-  min-height: 100vh;
-  background-image: url(img/pragmata2jpg.jpg);
+  height: 100vh;
+  width: 100%;
+  background-image: url(img/solo\ leveling\ 1920x1080.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -22,20 +23,19 @@ body {
 }
 
 .card {
-  background-image: url(img/fundo\ caixa.jpg);
+  background-image: black;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-
   border: 2.5px solid rgba(255, 255, 255, 0.16);
   border-radius: 20px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
-  /* box shadow: 0 20px 50px - 
-  0 = deslocamento horizontal
+  box-shadow: -5px -5px 0.3px #ffeb3b;
+  /* 0 = deslocamento horizontal
   20px = deslocamento vertical
   50px = raio de desfoque (blur) */
   padding: 32px;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(0px);
+  /* Efeito de transparência do fundo. Muito legal */
 }
 
 .card-header h1 {
@@ -112,6 +112,7 @@ body {
   gap: 12px;
 }
 
+/* REGISTROS SALVOS */
 .history-card {
   margin-top: 24px;
   padding: 18px 20px;
@@ -124,11 +125,11 @@ body {
     background 0.2s ease;
 }
 
-.history-card:hover {
+/* .history-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
   background: rgba(255, 255, 255, 0.09);
-}
+} */
 
 .history-card h2 {
   margin-bottom: 8px;
@@ -146,6 +147,7 @@ body {
   gap: 12px;
 }
 
+/* CAIXAS DOS ITENS DO HISTÓRICO */
 .history-item {
   display: grid;
   gap: 6px;
@@ -188,7 +190,6 @@ body {
   font-size: 1rem;
 }
 
-
 button {
   border: none;
   border-radius: 999px;
@@ -203,6 +204,26 @@ button {
 }
 
 button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.button-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 12px 20px;
+  background: #ffeb3b;
+  color: #182848;
+  font-weight: 700;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.button-link:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
